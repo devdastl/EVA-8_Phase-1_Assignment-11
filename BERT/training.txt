@@ -1,0 +1,965 @@
+Deep learning is part of a broader family of machine learning methods based on artificial neural networks with representation learning. 
+Learning can be supervised, semi-supervised or unsupervised. Definition Deep-learning architectures such as deep neural networks, deep belief networks, deep reinforcement learning, recurrent neural networks, convolutional neural networks and transformers have been applied to fields including computer vision, speech recognition, natural language processing, machine translation, bioinformatics, drug design, medical image analysis, climate science, material inspection and board game programs, where they have produced results comparable to and in some cases surpassing human expert performance. 
+Overview Artificial neural networks (ANNs) were inspired by information processing and distributed communication nodes in biological systems. 
+ANNs have various differences from biological brains.  Specifically, artificial neural networks tend to be static and symbolic, while the biological brain of most living organisms is dynamic (plastic) and analog. 
+Interpretations The adjective "deep" in deep learning refers to the use of multiple layers in the network. 
+Early work showed that a linear perceptron cannot be a universal classifier, but that a network with a nonpolynomial activation function with one hidden layer of unbounded width can. 
+Deep learning is a modern variation that is concerned with an unbounded number of layers of bounded size, which permits practical application and optimized implementation, while retaining theoretical universality under mild conditions. 
+In deep learning the layers are also permitted to be heterogeneous and to deviate widely from biologically informed connectionist models, for the sake of efficiency, trainability and understandability. 
+History Deep learning is a class of machine learning algorithms that: 199–200  uses multiple layers to progressively extract higher-level features from the raw input. 
+For example, in image processing, lower layers may identify edges, while higher layers may identify the concepts relevant to a human such as digits or letters or faces. 
+Deep learning revolution From another angle to view deep learning, deep learning refers to ‘computer-simulate’ or ‘automate’ human learning processes from a source (e.g., an image of dogs) to a learned object (dogs). 
+Therefore, a notion coined as “deeper” learning or “deepest” learning  makes sense. The deepest learning refers to the fully automatic learning from a source to a final learned object. 
+A deeper learning thus refers to a mixed learning process: a human learning process from a source to a learned semi-object, followed by a computer learning process from the human learned semi-object to a final learned object. 
+Neural networks Most modern deep learning models are based on artificial neural networks, specifically convolutional neural networks (CNN)s, although they can also include propositional formulas or latent variables organized layer-wise in deep generative models such as the nodes in deep belief networks and deep Boltzmann machines. 
+Artificial neural networks In deep learning, each level learns to transform its input data into a slightly more abstract and composite representation. 
+In an image recognition application, the raw input may be a matrix of pixels; the first representational layer may abstract the pixels and encode edges; the second layer may compose and encode arrangements of edges; the third layer may encode a nose and eyes; and the fourth layer may recognize that the image contains a face. 
+Importantly, a deep learning process can learn which features to optimally place in which level on its own. 
+This does not eliminate the need for hand-tuning; for example, varying numbers of layers and layer sizes can provide different degrees of abstraction. 
+Deep neural networks The word "deep" in "deep learning" refers to the number of layers through which the data is transformed. 
+More precisely, deep learning systems have a substantial credit assignment path (CAP) depth. The CAP is the chain of transformations from input to output. 
+CAPs describe potentially causal connections between input and output. For a feedforward neural network, the depth of the CAPs is that of the network and is the number of hidden layers plus one (as the output layer is also parameterized). 
+For recurrent neural networks, in which a signal may propagate through a layer more than once, the CAP depth is potentially unlimited. 
+No universally agreed-upon threshold of depth divides shallow learning from deep learning, but most researchers agree that deep learning involves CAP depth higher than 2. 
+CAP of depth 2 has been shown to be a universal approximator in the sense that it can emulate any function. 
+Beyond that, more layers do not add to the function approximator ability of the network. Deep models (CAP > 2) are able to extract better features than shallow models and hence, extra layers help in learning the features effectively. 
+Challenges Deep learning architectures can be constructed with a greedy layer-by-layer method. Deep learning helps to disentangle these abstractions and pick out which features improve performance. 
+Hardware For supervised learning tasks, deep learning methods eliminate feature engineering, by translating the data into compact intermediate representations akin to principal components, and derive layered structures that remove redundancy in representation. 
+Applications Deep learning algorithms can be applied to unsupervised learning tasks. This is an important benefit because unlabeled data are more abundant than the labeled data. 
+Examples of deep structures that can be trained in an unsupervised manner are deep belief networks. 
+Automatic speech recognition Deep neural networks are generally interpreted in terms of the universal approximation theorem or probabilistic inference. 
+Image recognition The classic universal approximation theorem concerns the capacity of feedforward neural networks with a single hidden layer of finite size to approximate continuous functions. 
+In 1989, the first proof was published by George Cybenko for sigmoid activation functions and was generalised to feed-forward multi-layer architectures in 1991 by Kurt Hornik. 
+Recent work also showed that universal approximation also holds for non-bounded activation functions such as the rectified linear unit. 
+Visual art processing The universal approximation theorem for deep neural networks concerns the capacity of networks with bounded width but the depth is allowed to grow. 
+Lu et al. proved that if the width of a deep neural network with ReLU activation is strictly larger than the input dimension, then the network can approximate any Lebesgue integrable function; If the width is smaller or equal to the input dimension, then a deep neural network is not a universal approximator. 
+Natural language processing The probabilistic interpretation derives from the field of machine learning. 
+It features inference, as well as the optimization concepts of training and testing, related to fitting and generalization, respectively. 
+More specifically, the probabilistic interpretation considers the activation nonlinearity as a cumulative distribution function. 
+The probabilistic interpretation led to the introduction of dropout as regularizer in neural networks. 
+The probabilistic interpretation was introduced by researchers including Hopfield, Widrow and Narendra and popularized in surveys such as the one by Bishop. 
+Drug discovery and toxicology Some sources point out that Frank Rosenblatt developed and explored all of the basic ingredients of the deep learning systems of today. 
+He described it in his book "Principles of Neurodynamics: Perceptrons and the Theory of Brain Mechanisms", published by Cornell Aeronautical Laboratory, Inc., Cornell University in 1962. 
+Customer relationship management The first general, working learning algorithm for supervised, deep, feedforward, multilayer perceptrons was published by Alexey Ivakhnenko and Lapa in 1967. 
+A 1971 paper described a deep network with eight layers trained by the group method of data handling. 
+Other deep learning working architectures, specifically those built for computer vision, began with the Neocognitron introduced by Kunihiko Fukushima in 1980. 
+Recommendation systems The term Deep Learning was introduced to the machine learning community by Rina Dechter in 1986, and to artificial neural networks by Igor Aizenberg and colleagues in 2000, in the context of Boolean threshold neurons. 
+Bioinformatics In 1989, Yann LeCun et al. applied the standard backpropagation algorithm, which had been around as the reverse mode of automatic differentiation since 1970, to a deep neural network with the purpose of recognizing handwritten ZIP codes on mail. 
+While the algorithm worked, training required 3 days. Medical image analysis Independently in 1988, Wei Zhang et al. 
+applied the backpropagation algorithm to a convolutional neural network (a simplified Neocognitron by keeping only the convolutional interconnections between the image feature layers and the last fully connected layer) for alphabets recognition and also proposed an implementation of the CNN with an optical computing system. 
+Subsequently, Wei Zhang, et al. modified the model by removing the last fully connected layer and applied it for medical image object segmentation in 1991 and breast cancer detection in mammograms in 1994. 
+Mobile advertising In 1994, André de Carvalho, together with Mike Fairhurst and David Bisset, published experimental results of a multi-layer boolean neural network, also known as a weightless neural network, composed of a 3-layers self-organising feature extraction neural network module (SOFT) followed by a multi-layer classification neural network module (GSN), which were independently trained. 
+Each layer in the feature extraction module extracted features with growing complexity regarding the previous layer. 
+Image restoration In 1995, Brendan Frey demonstrated that it was possible to train (over two days) a network containing six fully connected layers and several hundred hidden units using the wake-sleep algorithm, co-developed with Peter Dayan and Hinton. 
+Many factors contribute to the slow speed, including the vanishing gradient problem analyzed in 1991 by Sepp Hochreiter. 
+Financial fraud detection Since 1997, Sven Behnke extended the feed-forward hierarchical convolutional approach in the Neural Abstraction Pyramid by lateral and backward connections in order to flexibly incorporate context into decisions and iteratively resolve local ambiguities. 
+Military Simpler models that use task-specific handcrafted features such as Gabor filters and support vector machines (SVMs) were a popular choice in the 1990s and 2000s, because of artificial neural network's (ANN) computational cost and a lack of understanding of how the brain wires its biological networks. 
+Partial differential equations Both shallow and deep learning (e.g., recurrent nets) of ANNs have been explored for many years. 
+These methods never outperformed non-uniform internal-handcrafting Gaussian mixture model/Hidden Markov model (GMM-HMM) technology based on generative models of speech trained discriminatively. 
+Key difficulties have been analyzed, including gradient diminishing and weak temporal correlation structure in neural predictive models. 
+Additional difficulties were the lack of training data and limited computing power. Image Reconstruction Most speech recognition researchers moved away from neural nets to pursue generative modeling. 
+An exception was at SRI International in the late 1990s. Funded by the US government's NSA and DARPA, SRI studied deep neural networks in speech and speaker recognition. 
+The speaker recognition team led by Larry Heck reported significant success with deep neural networks in speech processing in the 1998 National Institute of Standards and Technology Speaker Recognition evaluation. 
+The SRI deep neural network was then deployed in the Nuance Verifier, representing the first major industrial application of deep learning. 
+Relation to human cognitive and brain development The principle of elevating "raw" features over hand-crafted optimization was first explored successfully in the architecture of deep autoencoder on the "raw" spectrogram or linear filter-bank features in the late 1990s, showing its superiority over the Mel-Cepstral features that contain stages of fixed transformation from spectrograms. 
+The raw features of speech, waveforms, later produced excellent larger-scale results. Commercial activity Many aspects of speech recognition were taken over by a deep learning method called long short-term memory (LSTM), a recurrent neural network published by Hochreiter and Schmidhuber in 1997. 
+LSTM RNNs avoid the vanishing gradient problem and can learn "Very Deep Learning" tasks that require memories of events that happened thousands of discrete time steps before, which is important for speech. 
+In 2003, LSTM started to become competitive with traditional speech recognizers on certain tasks. Later it was combined with connectionist temporal classification (CTC) in stacks of LSTM RNNs. 
+In 2015, Google's speech recognition reportedly experienced a dramatic performance jump of 49% through CTC-trained LSTM, which they made available through Google Voice Search. 
+Criticism and comment In 2006, publications by Geoff Hinton, Ruslan Salakhutdinov, Osindero and Teh showed how a many-layered feedforward neural network could be effectively pre-trained one layer at a time, treating each layer in turn as an unsupervised restricted Boltzmann machine, then fine-tuning it using supervised backpropagation. 
+The papers referred to learning for deep belief nets. Theory Deep learning is part of state-of-the-art systems in various disciplines, particularly computer vision and automatic speech recognition (ASR). 
+Results on commonly used evaluation sets such as TIMIT (ASR) and MNIST (image classification), as well as a range of large-vocabulary speech recognition tasks have steadily improved. 
+Convolutional neural networks (CNNs) were superseded for ASR by CTC for LSTM. but are more successful in computer vision. 
+Errors The impact of deep learning in industry began in the early 2000s, when CNNs already processed an estimated 10% to 20% of all the checks written in the US, according to Yann LeCun. 
+Industrial applications of deep learning to large-scale speech recognition started around 2010. Cyber threat The 2009 NIPS Workshop on Deep Learning for Speech Recognition was motivated by the limitations of deep generative models of speech, and the possibility that given more capable hardware and large-scale data sets that deep neural nets (DNN) might become practical. 
+It was believed that pre-training DNNs using generative models of deep belief nets (DBN) would overcome the main difficulties of neural nets. 
+However, it was discovered that replacing pre-training with large amounts of training data for straightforward backpropagation when using DNNs with large, context-dependent output layers produced error rates dramatically lower than then-state-of-the-art Gaussian mixture model (GMM)/Hidden Markov Model (HMM) and also than more-advanced generative model-based systems. 
+The nature of the recognition errors produced by the two types of systems was characteristically different, offering technical insights into how to integrate deep learning into the existing highly efficient, run-time speech decoding system deployed by all major speech recognition systems. 
+Analysis around 2009–2010, contrasting the GMM (and other generative speech models) vs. DNN models, stimulated early industrial investment in deep learning for speech recognition, eventually leading to pervasive and dominant use in that industry. 
+That analysis was done with comparable performance (less than 1.5% in error rate) between discriminative DNNs and generative models. 
+Reliance on human microwork In 2010, researchers extended deep learning from TIMIT to large vocabulary speech recognition, by adopting large output layers of the DNN based on context-dependent HMM states constructed by decision trees. 
+See also Advances in hardware have driven renewed interest in deep learning. In 2009, Nvidia was involved in what was called the “big bang” of deep learning, “as deep-learning neural networks were trained with Nvidia graphics processing units (GPUs).” That year, Andrew Ng determined that GPUs could increase the speed of deep-learning systems by about 100 times. 
+In particular, GPUs are well-suited for the matrix/vector computations involved in machine learning. 
+GPUs speed up training algorithms by orders of magnitude, reducing running times from weeks to days. 
+Further, specialized hardware and algorithm optimizations can be used for efficient processing of deep learning models. 
+References In 2012, a team led by George E. Dahl won the "Merck Molecular Activity Challenge" using multi-task deep neural networks to predict the biomolecular target of one drug. 
+In 2014, Hochreiter's group used deep learning to detect off-target and toxic effects of environmental chemicals in nutrients, household products and drugs and won the "Tox21 Data Challenge" of NIH, FDA and NCATS. 
+Furt. 
+ Training Artificial neural networks (ANNs), usually simply called neural networks (NNs) or neural nets, are computing systems inspired by the biological neural networks that constitute animal brains. 
+History An ANN is based on a collection of connected units or nodes called artificial neurons, which loosely model the neurons in a biological brain. 
+Each connection, like the synapses in a biological brain, can transmit a signal to other neurons. An artificial neuron receives signals then processes them and can signal neurons connected to it. 
+The "signal" at a connection is a real number, and the output of each neuron is computed by some non-linear function of the sum of its inputs. 
+The connections are called edges. Neurons and edges typically have a weight that adjusts as learning proceeds. 
+The weight increases or decreases the strength of the signal at a connection. Neurons may have a threshold such that a signal is sent only if the aggregate signal crosses that threshold. 
+Models Typically, neurons are aggregated into layers. Different layers may perform different transformations on their inputs. 
+Signals travel from the first layer (the input layer), to the last layer (the output layer), possibly after traversing the layers multiple times. 
+Artificial neurons Neural networks learn (or are trained) by processing examples, each of which contains a known "input" and "result," forming probability-weighted associations between the two, which are stored within the data structure of the net itself. 
+The training of a neural network from a given example is usually conducted by determining the difference between the processed output of the network (often a prediction) and a target output. 
+This difference is the error. The network then adjusts its weighted associations according to a learning rule and using this error value. 
+Successive adjustments will cause the neural network to produce output that is increasingly similar to the target output. 
+After a sufficient number of these adjustments, the training can be terminated based on certain criteria. 
+This is a form of supervised learning. Organization Such systems "learn" to perform tasks by considering examples, generally without being programmed with task-specific rules. 
+For example, in image recognition, they might learn to identify images that contain cats by analyzing example images that have been manually labeled as "cat" or "no cat" and using the results to identify cats in other images. 
+They do this without any prior knowledge of cats, for example, that they have fur, tails, whiskers, and cat-like faces. 
+Instead, they automatically generate identifying characteristics from the examples that they process. 
+Hyperparameter Warren McCulloch and Walter Pitts (1943) opened the subject by creating a computational model for neural networks. 
+In the late 1940s, D. O. Hebb created a learning hypothesis based on the mechanism of neural plasticity that became known as Hebbian learning. 
+Farley and Wesley A. Clark (1954) first used computational machines, then called "calculators", to simulate a Hebbian network. 
+In 1958, psychologist Frank Rosenblatt invented the perceptron, the first implemented artificial neural network, funded by the United States Office of Naval Research. 
+The first functional networks with many layers were published by Ivakhnenko and Lapa in 1965, as the Group Method of Data Handling. 
+The basics of continuous backpropagation were derived in the context of control theory by Kelley in 1960 and by Bryson in 1961, using principles of dynamic programming. 
+Thereafter research stagnated following Minsky and Papert (1969), who discovered that basic perceptrons were incapable of processing the exclusive-or circuit and that computers lacked sufficient power to process useful neural networks. 
+Learning In 1970, Seppo Linnainmaa published the general method for automatic differentiation (AD) of discrete connected networks of nested differentiable functions. 
+In 1973, Dreyfus used backpropagation to adapt parameters of controllers in proportion to error gradients. 
+Werbos's (1975) backpropagation algorithm enabled practical training of multi-layer networks. In 1982, he applied Linnainmaa's AD method to neural networks in the way that became widely used. 
+Learning rate The development of metal–oxide–semiconductor (MOS) very-large-scale integration (VLSI), in the form of complementary MOS (CMOS) technology, enabled increasing MOS transistor counts in digital electronics. 
+This provided more processing power for the development of practical artificial neural networks in the 1980s. 
+Cost function In 1986 Rumelhart, Hinton and Williams showed that backpropagation learned interesting internal representations of words as feature vectors when trained to predict the next word in a sequence. 
+Backpropagation From 1988 onward, the use of neural networks transformed the field of protein structure prediction, in particular when the first cascading networks were trained on profiles (matrices) produced by multiple sequence alignments. 
+Learning paradigms In 1992, max-pooling was introduced to help with least-shift invariance and tolerance to deformation to aid 3D object recognition. 
+Schmidhuber adopted a multi-level hierarchy of networks (1992) pre-trained one level at a time by unsupervised learning and fine-tuned by backpropagation. 
+Supervised learning Neural networks' early successes included predicting the stock market and in 1995 a (mostly) self-driving car. 
+Unsupervised learning Geoffrey Hinton et al. (2006) proposed learning a high-level representation using successive layers of binary or real-valued latent variables with a restricted Boltzmann machine to model each layer. 
+In 2012, Ng and Dean created a network that learned to recognize higher-level concepts, such as cats, only from watching unlabeled images. 
+Unsupervised pre-training and increased computing power from GPUs and distributed computing allowed the use of larger networks, particularly in image and visual recognition problems, which became known as "deep learning". 
+Reinforcement learning Ciresan and colleagues (2010) showed that despite the vanishing gradient problem, GPUs make backpropagation feasible for many-layered feedforward neural networks. 
+Between 2009 and 2012, ANNs began winning prizes in image recognition contests, approaching human level performance on various tasks, initially in pattern recognition and handwriting recognition. 
+For example, the bi-directional and multi-dimensional long short-term memory (LSTM) of Graves et al. 
+won three competitions in connected handwriting recognition in 2009 without any prior knowledge about the three languages to be learned. 
+Self-learning Ciresan and colleagues built the first pattern recognizers to achieve human-competitive/superhuman performance on benchmarks such as traffic sign recognition (IJCNN 2012). 
+Neuroevolution ANNs began as an attempt to exploit the architecture of the human brain to perform tasks that conventional algorithms had little success with. 
+They soon reoriented towards improving empirical results, abandoning attempts to remain true to their biological precursors. 
+ANNs have the ability to learn and model non-linearities and complex relationships. This is achieved by neurons being connected in various patterns, allowing the output of some neurons to become the input of others. 
+The network forms a directed, weighted graph. Stochastic neural network An artificial neural network consists of simulated neurons. 
+Each neuron is connected to other nodes via links like a biological axon-synapse-dendrite connection. 
+All the nodes connected by links take in some data and use it to perform specific operations and tasks on the data. 
+Each link has a weight, determining the strength of one node's influence on another, allowing weights to choose the signal between neurons. 
+Other ANNs are composed of artificial neurons which are conceptually derived from biological neurons. 
+Each artificial neuron has inputs and produces a single output which can be sent to multiple other neurons. 
+The inputs can be the feature values of a sample of external data, such as images or documents, or they can be the outputs of other neurons. 
+The outputs of the final output neurons of the neural net accomplish the task, such as recognizing an object in an image. 
+Modes To find the output of the neuron we take the weighted sum of all the inputs, weighted by the weights of the connections from the inputs to the neuron. 
+We add a bias term to this sum. This weighted sum is sometimes called the activation. This weighted sum is then passed through a (usually nonlinear) activation function to produce the output. 
+The initial inputs are external data, such as images and documents. The ultimate outputs accomplish the task, such as recognizing an object in an image. 
+Types The neurons are typically organized into multiple layers, especially in deep learning. Neurons of one layer connect only to neurons of the immediately preceding and immediately following layers. 
+The layer that receives external data is the input layer. The layer that produces the ultimate result is the output layer. 
+In between them are zero or more hidden layers. Single layer and unlayered networks are also used. Between two layers, multiple connection patterns are possible. 
+They can be 'fully connected', with every neuron in one layer connecting to every neuron in the next layer. 
+They can be pooling, where a group of neurons in one layer connects to a single neuron in the next layer, thereby reducing the number of neurons in that layer. 
+Neurons with only such connections form a directed acyclic graph and are known as feedforward networks. 
+Alternatively, networks that allow connections between neurons in the same or previous layers are known as recurrent networks. 
+Network design A hyperparameter is a constant parameter whose value is set before the learning process begins. 
+The values of parameters are derived via learning. Examples of hyperparameters include learning rate, the number of hidden layers and batch size. 
+The values of some hyperparameters can be dependent on those of other hyperparameters. For example, the size of some layers can depend on the overall number of layers. 
+Use Learning is the adaptation of the network to better handle a task by considering sample observations. 
+Learning involves adjusting the weights (and optional thresholds) of the network to improve the accuracy of the result. 
+This is done by minimizing the observed errors. Learning is complete when examining additional observations does not usefully reduce the error rate. 
+Even after learning, the error rate typically does not reach 0. If after learning, the error rate is too high, the network typically must be redesigned. 
+Practically this is done by defining a cost function that is evaluated periodically during learning. 
+As long as its output continues to decline, learning continues. The cost is frequently defined as a statistic whose value can only be approximated. 
+The outputs are actually numbers, so when the error is low, the difference between the output (almost certainly a cat) and the correct answer (cat) is small. 
+Learning attempts to reduce the total of the differences across the observations. Most learning models can be viewed as a straightforward application of optimization theory and statistical estimation. 
+Applications The learning rate defines the size of the corrective steps that the model takes to adjust for errors in each observation. 
+A high learning rate shortens the training time, but with lower ultimate accuracy, while a lower learning rate takes longer, but with the potential for greater accuracy. 
+Optimizations such as Quickprop are primarily aimed at speeding up error minimization, while other improvements mainly try to increase reliability. 
+In order to avoid oscillation inside the network such as alternating connection weights, and to improve the rate of convergence, refinements use an adaptive learning rate that increases or decreases as appropriate. 
+The concept of momentum allows the balance between the gradient and the previous change to be weighted such that the weight adjustment depends to some degree on the previous change. 
+A momentum close to 0 emphasizes the gradient, while a value close to 1 emphasizes the last change. 
+Theoretical properties While it is possible to define a cost function ad hoc, frequently the choice is determined by the function's desirable properties (such as convexity) or because it arises from the model (e.g. 
+in a probabilistic model the model's posterior probability can be used as an inverse cost). Computational power Backpropagation is a method used to adjust the connection weights to compensate for each error found during learning. 
+The error amount is effectively divided among the connections. Technically, backprop calculates the gradient (the derivative) of the cost function associated with a given state with respect to the weights. 
+The weight updates can be done via stochastic gradient descent or other methods, such as extreme learning machines, "no-prop" networks, training without backtracking, "weightless" networks, and non-connectionist neural networks. 
+Capacity Machine learning is commonly separated into three main learning paradigms, supervised learning, unsupervised learning and reinforcement learning. 
+Each corresponds to a particular learning task. Convergence Supervised learning uses a set of paired inputs and desired outputs. 
+The learning task is to produce the desired output for each input. In this case, the cost function is related to eliminating incorrect deductions. 
+A commonly used cost is the mean-squared error, which tries to minimize the average squared error between the network's output and the desired output. 
+Tasks suited for supervised learning are pattern recognition (also known as classification) and regression (also known as function approximation). 
+Supervised learning is also applicable to sequential data (e.g., for hand writing, speech and gesture recognition). 
+This can be thought of as learning with a "teacher", in the form of a function that provides continuous feedback on the quality of solutions obtained thus far. 
+Generalization and statistics In unsupervised learning, input data is given along with the cost function, some function of the data x{\displaystyle \textstyle x} and the network's output. 
+The cost function is dependent on the task (the model domain) and any a priori assumptions (the implicit properties of the model, its parameters and the observed variables). 
+As a trivial example, consider the model f(x)=a{\displaystyle \textstyle f(x)=a} where a{\displaystyle \textstyle a} is a constant and the cost C=E[(x−f(x))2]{\displaystyle \textstyle C=E}. 
+Minimizing this cost produces a value of a{\displaystyle \textstyle a} that is equal to the mean of the data. 
+The cost function can be much more complicated. Its form depends on the application: for example, in compression it could be related to the mutual information between x{\displaystyle \textstyle x} and f(x){\displaystyle \textstyle f(x)}, whereas in statistical modeling, it could be related to the posterior probability of the model given the data (note that in both of those examples, those quantities would be maximized rather than minimized). 
+Tasks that fall within the paradigm of unsupervised learning are in general estimation problems; the applications include clustering, the estimation of statistical distributions, compression and filtering. 
+Criticism In applications such as playing video games, an actor takes a string of actions, receiving a generally unpredictable response from the environment after each one. 
+The goal is to win the game, i.e., generate the most positive (lowest cost) responses. In reinforcement learning, the aim is to weight the network (devise a policy) to perform actions that minimize long-term (expected cumulative) cost. 
+At each point in time the agent performs an action and the environment generates an observation and an instantaneous cost, according to some (usually unknown) rules. 
+The rules and the long-term cost usually only can be estimated. At any juncture, the agent decides whether to explore new actions to uncover their costs or to exploit prior learning to proceed more quickly. 
+Training Formally the environment is modeled as a Markov decision process (MDP) with states s1,...,sn∈S{\displaystyle \textstyle {s_{1},...,s_{n}}\in S} and actions a1,...,am∈A{\displaystyle \textstyle {a_{1},...,a_{m}}\in A}. 
+Because the state transitions are not known, probability distributions are used instead: the instantaneous cost distribution P(ct|st){\displaystyle \textstyle P(c_{t}|s_{t})}, the observation distribution P(xt|st){\displaystyle \textstyle P(x_{t}|s_{t})} and the transition distribution P(st+1|st,at){\displaystyle \textstyle P(s_{t+1}|s_{t},a_{t})}, while a policy is defined as the conditional distribution over actions given the observations. 
+Taken together, the two define a Markov chain (MC). The aim is to discover the lowest-cost MC. Theory ANNs serve as the learning component in such applications. 
+Dynamic programming coupled with ANNs (giving neurodynamic programming) has been applied to problems such as those involved in vehicle routing, video games, natural resource management and medicine because of ANNs ability to mitigate losses of accuracy even when reducing the discretization grid density for numerically approximating the solution of control problems. 
+Tasks that fall within the paradigm of reinforcement learning are control problems, games and other sequential decision making tasks. 
+Hardware Self-learning in neural networks was introduced in 1982 along with a neural network capable of self-learning named crossbar adaptive array (CAA). 
+It is a system with only one input, situation s, and only one output, action (or behavior) a. It has neither external advice input nor external reinforcement input from the environment. 
+The CAA computes, in a crossbar fashion, both decisions about actions and emotions (feelings) about encountered situations. 
+The system is driven by the interaction between cognition and emotion. Given the memory matrix, W =||w(a,s)||, the crossbar self-learning algorithm in each iteration performs the following computation: Practical counterexamples The backpropagated value (secondary reinforcement) is the emotion toward the consequence situation. 
+The CAA exists in two environments, one is behavioral environment where it behaves, and the other is genetic environment, where from it initially and only once receives initial emotions about to be encountered situations in the behavioral environment. 
+Having received the genome vector (species vector) from the genetic environment, the CAA will learn a goal-seeking behavior, in the behavioral environment that contains both desirable and undesirable situations. 
+Hybrid approaches Neuroevolution can create neural network topologies and weights using evolutionary computation. 
+It is competitive with sophisticated gradient descent approaches. One advantage of neuroevolution is that it may be less prone to get caught in "dead ends". 
+Gallery Stochastic neural networks originating from  Sherrington–Kirkpatrick models  are a type of artificial neural network built by introducing random variations into the network, either by giving the network's artificial neurons stochastic transfer functions, or by giving them stochastic weights. 
+This makes them useful tools for optimization problems, since the random fluctuations help the network escape from local minima. 
+Stochastic neural networks trained using a Bayesian approach are known as Bayesian neural networks. 
+See also In a Bayesian framework, a distribution over the set of allowed models is chosen to minimize the cost. 
+Evolutionary methods, gene expression programming, simulated annealing, expectation-maximization, non-parametric methods and particle swarm optimization are other learning algorithms. 
+Convergent recursion is a learning algorithm for cerebellar model articulation controller (CMAC) neural networks. 
+Notes Two modes of learning are available: stochastic and batch. In stochastic learning, each input creates a weight adjustment. 
+In batch learning weights are adjusted based on a batch of inputs, accumulating errors over the batch. 
+Stochastic learning introduces "noise" into the process, using the local gradient calculated from one data point; this reduces the chance of the network getting stuck in local minima. 
+However, batch learning typically yields a faster, more stable descent to a local minimum, since each update is performed in the direction of the batch's average error. 
+A common compromise is to use "mini-batches", small batches with samples in each batch selected stochastically from the entire data set. 
+References ANNs have evolved into a broad family of techniques that have advanced the state of the art across multiple domains. 
+ The simplest types have one or more static components, including number of units, number of layers, unit weights and topology. 
+Dynamic types allow one or more of these to evolve via learning. The latter are much more complicated, but can shorten learning periods and produce better results. 
+Some types allow/require learning to be "supervised" by the operator, while others operate independently. 
+Some types operate purely in hardware, while others are purely software and run on general purpose computers. 
+B. 
+In deep learning, a convolutional neural network (CNN) is a class of artificial neural network most commonly applied to analyze visual imagery. 
+CNNs are also known as Shift Invariant or Space Invariant Artificial Neural Networks (SIANN), based on the shared-weight architecture of the convolution kernels or filters that slide along input features and provide translation-equivariant responses known as feature maps. 
+Counter-intuitively, most convolutional neural networks are not invariant to translation, due to the downsampling operation they apply to the input. 
+They have applications in image and video recognition, recommender systems, image classification, image segmentation, medical image analysis, natural language processing, brain–computer interfaces, and financial time series. 
+Definition CNNs are regularized versions of multilayer perceptrons. Multilayer perceptrons usually mean fully connected networks, that is, each neuron in one layer is connected to all neurons in the next layer. 
+The "full connectivity" of these networks make them prone to overfitting data. Typical ways of regularization, or preventing overfitting, include: penalizing parameters during training (such as weight decay), trimming connectivity (skipped connections, dropout, etc.) Developing robust datasets also increases the probability that CNNs will learn the generalized principles that characterize a given dataset rather than the biases of a poorly-populated set. 
+Architecture CNNs take a different approach towards regularization: they take advantage of the hierarchical pattern in data and assemble patterns of increasing complexity using smaller and simpler patterns embossed in their filters. 
+Therefore, on a scale of connectivity and complexity, CNNs are on the lower extreme. Convolutional layers Convolutional networks were inspired by biological processes in that the connectivity pattern between neurons resembles the organization of the animal visual cortex. 
+Individual cortical neurons respond to stimuli only in a restricted region of the visual field known as the receptive field. 
+The receptive fields of different neurons partially overlap such that they cover the entire visual field. 
+Pooling layers CNNs use relatively little pre-processing compared to other image classification algorithms. 
+This means that the network learns to optimize the filters (or kernels) through automated learning, whereas in traditional algorithms these filters are hand-engineered. 
+This independence from prior knowledge and human intervention in feature extraction is a major advantage. 
+Fully connected layers Convolutional neural networks are a specialized type of artificial neural networks that use a mathematical operation called convolution in place of general matrix multiplication in at least one of their layers. 
+They are specifically designed to process pixel data and are used in image recognition and processing. 
+Receptive field A convolutional neural network consists of an input layer, hidden layers and an output layer. 
+In any feed-forward neural network, any middle layers are called hidden because their inputs and outputs are masked by the activation function and final convolution. 
+In a convolutional neural network, the hidden layers include layers that perform convolutions. Typically this includes a layer that performs a dot product of the convolution kernel with the layer's input matrix. 
+This product is usually the Frobenius inner product, and its activation function is commonly ReLU. As the convolution kernel slides along the input matrix for the layer, the convolution operation generates a feature map, which in turn contributes to the input of the next layer. 
+This is followed by other layers such as pooling layers, fully connected layers, and normalization layers. 
+Weights In a CNN, the input is a tensor with shape: (number of inputs) × (input height) × (input width) × (input channels). 
+After passing through a convolutional layer, the image becomes abstracted to a feature map, also called an activation map, with shape: (number of inputs) × (feature map height) × (feature map width) × (feature map channels). 
+History Convolutional layers convolve the input and pass its result to the next layer. This is similar to the response of a neuron in the visual cortex to a specific stimulus. 
+Each convolutional neuron processes data only for its receptive field. Although fully connected feedforward neural networks can be used to learn features and classify data, this architecture is generally impractical for larger inputs (e.g., high-resolution images), which would require massive numbers of neurons because each pixel is a relevant input feature. 
+A fully connected layer for an image of size 100 × 100 has 10,000 weights for each neuron in the second layer. 
+Convolution reduces the number of free parameters, allowing the network to be deeper. For example, using a 5 × 5 tiling region, each with the same shared weights, requires only 25 neurons. 
+Using regularized weights over fewer parameters avoids the vanishing gradients and exploding gradients problems seen during backpropagation in earlier neural networks. 
+Receptive fields in the visual cortex To speed processing, standard convolutional layers can be replaced by depthwise separable convolutional layers, which are based on a depthwise convolution followed by a pointwise convolution. 
+The depthwise convolution is a spatial convolution applied independently over each channel of the input tensor, while the pointwise convolution is a standard convolution restricted to the use of 1×1{\displaystyle 1\times 1}  kernels. 
+Neocognitron, origin of the CNN architecture Convolutional networks may include local and/or global pooling layers along with traditional convolutional layers. 
+Pooling layers reduce the dimensions of data by combining the outputs of neuron clusters at one layer into a single neuron in the next layer. 
+Local pooling combines small clusters, tiling sizes such as 2 × 2 are commonly used. Global pooling acts on all the neurons of the feature map. 
+There are two common types of pooling in popular use: max and average. Max pooling uses the maximum value of each local cluster of neurons in the feature map, while average pooling takes the average value. 
+Time delay neural networks Fully connected layers connect every neuron in one layer to every neuron in another layer. 
+It is the same as a traditional multilayer perceptron neural network (MLP). The flattened matrix goes through a fully connected layer to classify the images. 
+Max pooling In neural networks, each neuron receives input from some number of locations in the previous layer. 
+In a convolutional layer, each neuron receives input from only a restricted area of the previous layer called the neuron's receptive field. 
+Typically the area is a square (e.g. 5 by 5 neurons). Whereas, in a fully connected layer, the receptive field is the entire previous layer. 
+Thus, in each convolutional layer, each neuron takes input from a larger area in the input than previous layers. 
+This is due to applying the convolution over and over, which takes into account the value of a pixel, as well as its surrounding pixels. 
+When using dilated layers, the number of pixels in the receptive field remains constant, but the field is more sparsely populated as its dimensions grow when combining the effect of several layers. 
+Image recognition with CNNs trained by gradient descent To manipulate the receptive field size as desired, there are some alternatives to the standard convolutional layer. 
+For example, atrous or dilated convolution expands the receptive field size without increasing the number of parameters by interleaving visible and blind regions. 
+Moreover, a single dilated convolutional layer can comprise filters with multiple dilation ratios, thus having a variable receptive field size. 
+LeNet-5 Each neuron in a neural network computes an output value by applying a specific function to the input values received from the receptive field in the previous layer. 
+The function that is applied to the input values is determined by a vector of weights and a bias (typically real numbers). 
+Learning consists of iteratively adjusting these biases and weights. Shift-invariant neural network The vectors of weights and biases are called filters and represent particular features of the input (e.g., a particular shape). 
+A distinguishing feature of CNNs is that many neurons can share the same filter. This reduces the memory footprint because a single bias and a single vector of weights are used across all receptive fields that share that filter, as opposed to each receptive field having its own bias and vector weighting. 
+Neural abstraction pyramid CNN are often compared to the way the brain achieves vision processing in living organisms. 
+GPU implementations Work by Hubel and Wiesel in the 1950s and 1960s showed that cat visual cortices contain neurons that individually respond to small regions of the visual field. 
+Provided the eyes are not moving, the region of visual space within which visual stimuli affect the firing of a single neuron is known as its receptive field. 
+Neighboring cells have similar and overlapping receptive fields.  Receptive field size and location varies systematically across the cortex to form a complete map of visual space. 
+ The cortex in each hemisphere represents the contralateral visual field. Intel Xeon Phi implementations Their 1968 paper identified two basic visual cell types in the brain: Distinguishing features Hubel and Wiesel also proposed a cascading model of these two types of cells for use in pattern recognition tasks. 
+Building blocks The "neocognitron" was introduced by Kunihiko Fukushima in 1980.It was inspired by the above-mentioned work of Hubel and Wiesel. 
+The neocognitron introduced the two basic types of layers in CNNs: convolutional layers, and downsampling layers. 
+A convolutional layer contains units whose receptive fields cover a patch of the previous layer. The weight vector (the set of adaptive parameters) of such a unit is often called a filter. 
+Units can share filters. Downsampling layers contain units whose receptive fields cover patches of previous convolutional layers. 
+Such a unit typically computes the average of the activations of the units in its patch. This downsampling helps to correctly classify objects in visual scenes even when the objects are shifted. 
+Convolutional layer In a variant of the neocognitron called the cresceptron, instead of using Fukushima's spatial averaging, J. 
+Weng et al. introduced a method called max-pooling where a downsampling unit computes the maximum of the activations of the units in its patch. 
+Max-pooling is often used in modern CNNs. Local connectivity Several supervised and unsupervised learning algorithms have been proposed over the decades to train the weights of a neocognitron. 
+Today, however, the CNN architecture is usually trained through backpropagation. Spatial arrangement The neocognitron is the first CNN which requires units located at multiple network positions to have shared weights. 
+Parameter sharing Convolutional neural networks were presented at the Neural Information Processing Workshop in 1987, automatically analyzing time-varying signals by replacing learned multiplication with convolution in time, and demonstrated for speech recognition. 
+Pooling layer The time delay neural network (TDNN) was introduced in 1987 by Alex Waibel et al. and was one of the first convolutional networks, as it achieved shift invariance. 
+It did so by utilizing weight sharing in combination with backpropagation training. Thus, while also using a pyramidal structure as in the neocognitron, it performed a global optimization of the weights instead of a local one. 
+Channel Max Pooling TDNNs are convolutional networks that share weights along the temporal dimension. 
+They allow speech signals to be processed time-invariantly. In 1990 Hampshire and Waibel introduced a variant which performs a two dimensional convolution. 
+Since these TDNNs operated on spectrograms, the resulting phoneme recognition system was invariant to both shifts in time and in frequency. 
+This inspired translation invariance in image processing with CNNs. The tiling of neuron outputs can cover timed stages. 
+ReLU layer TDNNs now achieve the best performance in far distance speech recognition. Fully connected layer In 1990 Yamaguchi et al. 
+introduced the concept of max pooling, which is a fixed filtering operation that calculates and propagates the maximum value of a given region. 
+They did so by combining TDNNs with max pooling in order to realize a speaker independent isolated word recognition system. 
+In their system they used several TDNNs per word, one for each syllable. The results of each TDNN over the input signal were combined using max pooling and the outputs of the pooling layers were then passed on to networks performing the actual word classification. 
+Loss layer A system to recognize hand-written ZIP Code numbers involved convolutions in which the kernel coefficients had been laboriously hand designed. 
+Hyperparameters Yann LeCun et al. (1989) used back-propagation to learn the convolution kernel coefficients directly from images of hand-written numbers. 
+Learning was thus fully automatic, performed better than manual coefficient design, and was suited to a broader range of image recognition problems and image types. 
+Kernel size Wei Zhang et al. (1988) used back-propagation to train the convolution kernels of a CNN for alphabets recognition. 
+The model was called Shift-Invariant Artificial Neural Network (SIANN) before the name CNN was coined later in the early 1990s. 
+Wei Zhang et al. also applied the same CNN without the last fully connected layer for medical image object segmentation (1991) and breast cancer detection in mammograms (1994). 
+Padding This approach became a foundation of modern computer vision. Stride LeNet-5, a pioneering 7-level convolutional network by LeCun et al. 
+in 1998, that classifies digits, was applied by several banks to recognize hand-written numbers on checks (British English: cheques) digitized in 32x32 pixel images. 
+The ability to process higher-resolution images requires larger and more layers of convolutional neural networks, so this technique is constrained by the availability of computing resources. 
+Number of filters A shift-invariant neural network was proposed by Wei Zhang et al. for image character recognition in 1988. 
+It is a modified Neocognitron by keeping only the convolutional interconnections between the image feature layers and the last fully connected layer. 
+ The model was trained with back-propagation. The training algorithm were further improved in 1991 to improve its generalization ability. 
+The model architecture was modified by removing the last fully connected layer and applied for medical image segmentation (1991) and automatic detection of breast cancer in mammograms (1994). 
+Filter size A different convolution-based design was proposed in 1988 for application to decomposition of one-dimensional electromyography convolved signals via de-convolution. 
+This design was modified in 1989 to other de-convolution-based designs. Pooling type and size The feed-forward architecture of convolutional neural networks was extended in the neural abstraction pyramid by lateral and feedback connections. 
+The resulting recurrent convolutional network allows for the flexible incorporation of contextual information to iteratively resolve local ambiguities. 
+In contrast to previous models, image-like outputs at the highest resolution were generated, e.g., for semantic segmentation, image reconstruction, and object localization tasks. 
+Dilation Although CNNs were invented in the 1980s, their breakthrough in the 2000s required fast implementations on graphics processing units (GPUs). 
+Translation equivariance and aliasing In 2004, it was shown by K. S. Oh and K. Jung that standard neural networks can be greatly accelerated on GPUs. 
+Their implementation was 20 times faster than an equivalent implementation on CPU. In 2005, another paper also emphasised the value of GPGPU for machine learning. 
+Evaluation The first GPU-implementation of a CNN was described in 2006 by K. Chellapilla et al. Their implementation was 4 times faster than an equivalent implementation on CPU. 
+Subsequent work also used GPUs, initially for other types of neural networks (different from CNNs), especially unsupervised neural networks. 
+Regularization methods In 2010, Dan Ciresan et al. at IDSIA showed that even deep standard neural networks with many layers can be quickly trained on GPU by supervised learning through the old method known as backpropagation. 
+Their network outperformed previous machine learning methods on the MNIST handwritten digits benchmark. 
+In 2011, they extended this GPU approach to CNNs, achieving an acceleration factor of 60, with impressive results. 
+In 2011, they used such CNNs on GPU to win an image recognition contest where they achieved superhuman performance for the first time. 
+Between May 15, 2011 and September 30, 2012, their CNNs won no less than four image competitions. In 2012, they also significantly improved on the best performance in the literature for multiple image databases, including the MNIST database, the NORB database, the HWDB1.0 dataset (Chinese characters) and the CIFAR10 dataset (dataset of 60000 32x32 labeled RGB images). 
+Empirical Subsequently, a similar GPU-based CNN by Alex Krizhevsky et al. won the ImageNet Large Scale Visual Recognition Challenge 2012. 
+A very deep CNN with over 100 layers by Microsoft won the ImageNet 2015 contest. Dropout Compared to the training of CNNs using GPUs, not much attention was given to the Intel Xeon Phi coprocessor.A notable development is a parallelization method for training convolutional neural networks on the Intel Xeon Phi, named Controlled Hogwild with Arbitrary Order of Synchronization (CHAOS).CHAOS exploits both the thread- and SIMD-level parallelism that is available on the Intel Xeon Phi. 
+DropConnect In the past, traditional multilayer perceptron (MLP) models were used for image recognition. 
+However, the full connectivity between nodes caused the curse of dimensionality, and was computationally intractable with higher-resolution images. 
+A 1000×1000-pixel image with RGB color channels has 3 million weights per fully-connected neuron, which is too high to feasibly process efficiently at scale. 
+Stochastic pooling For example, in CIFAR-10, images are only of size 32×32×3 (32 wide, 32 high, 3 color channels), so a single fully connected neuron in the first hidden layer of a regular neural network would have 32*32*3 = 3,072 weights. 
+A 200×200 image, however, would lead to neurons that have 200*200*3 = 120,000 weights. Artificial data Also, such network architecture does not take into account the spatial structure of data, treating input pixels which are far apart in the same way as pixels that are close together. 
+This ignores locality of reference in data with a grid-topology (such as images), both computationally and semantically. 
+Thus, full connectivity of neurons is wasteful for purposes such as image recognition that are dominated by spatially local input patterns. 
+Explicit Convolutional neural networks are variants of multilayer perceptrons, designed to emulate the behavior of a visual cortex. 
+These models mitigate the challenges posed by the MLP architecture by exploiting the strong spatially local correlation present in natural images. 
+As opposed to MLPs, CNNs have the following distinguishing features: Early stopping Together, these properties allow CNNs to achieve better generalization on vision problems. 
+Weight sharing dramatically reduces the number of free parameters learned, thus lowering the memory requirements for running the network and allowing the training of larger, more powerful networks. 
+Number of parameters A CNN architecture is formed by a stack of distinct layers that transform the input volume into an output volume (e.g. 
+holding the class scores) through a differentiable function. A few distinct types of layers are commonly used. 
+These are further discussed below. Weight decay The convolutional layer is the core building block of a CNN. 
+The layer's parameters consist of a set of learnable filters (or kernels), which have a small receptive field, but extend through the full depth of the input volume. 
+During the forward pass, each filter is convolved across the width and height of the input volume, computing the dot product between the filter entries and the input, producing a 2-dimensional activation map of that filter. 
+As a result, the network learns filters that activate when it detects some specific type of feature at some spatial position in the input. 
+Max norm constraints Stacking the activation maps for all filters along the depth dimension forms the full output volume of the convolution layer. 
+Every entry in the output volume can thus also be interpreted as an output of a neuron that looks at a small region in the input and shares parameters with neurons in the same activation map. 
+Hierarchical coordinate frames Self-supervised learning has been adapted for use in convolutional layers by using sparse patches with a high-mask ratio and a global response normalization layer. 
+Applications When dealing with high-dimensional inputs such as images, it is impractical to connect neurons to all neurons in the previous volume because such a network architecture does not take the spatial structure of the data into account. 
+Convolutional networks exploit spatially local correlation by enforcing a sparse local connectivity pattern between neurons of adjacent layers: each neuron is connected to only a small region of the input volume. 
+Image recognition The extent of this connectivity is a hyperparameter called the receptive field of the neuron. 
+The connections are local in space (along width and height), but always extend along the entire depth of the input volume. 
+Such an architecture ensures that the learnt filters produce the strongest response to a spatially local input pattern. 
+Video analysis Three hyperparameters control the size of the output volume of the convolutional layer: the depth, stride, and padding size: Natural language processing The spatial size of the output volume is a function of the input volume size W{\displaystyle W}, the kernel field size K{\displaystyle K} of the convolutional layer neurons, the stride S{\displaystyle S}, and the amount of zero padding P{\displaystyle P} on the border. 
+The number of neurons that "fit" in a given volume is then: Anomaly Detection If this number is not an integer, then the strides are incorrect and the neurons cannot be tiled to fit across the input volume in a symmetric way. 
+In general, setting zero padding to be P=(K−1)/2{\textstyle P=(K-1)/2} when the stride is S=1{\displaystyle S=1} ensures that the input volume and output volume will have the same size spatially. 
+However, it is not always completely necessary to use all of the neurons of the previous layer. For example, a neural network designer may decide to use just a portion of padding. 
+Drug discovery A parameter sharing scheme is used in convolutional layers to control the number of free parameters. 
+It relies on the assumption that if a patch feature is useful to compute at some spatial position, then it should also be useful to compute at other positions. 
+Denoting a single 2-dimensional slice of depth as a depth slice, the neurons in each depth slice are constrained to use the same weights and bias. 
+Checkers game Since all neurons in a single depth slice share the same parameters, the forward pass in each depth slice of the convolutional layer can be computed as a convolution of the neuron's weights with the input volume. 
+Therefore, it is common to refer to the sets of weights as a filter (or a kernel), which is convolved with the input. 
+The result of this convolution is an activation map, and the set of activation maps for each different filter are stacked together along the depth dimension to produce the output volume. 
+Parameter sharing contributes to the translation invariance of the CNN architecture. Go Sometimes, the parameter sharing assumption may not make sense. 
+This is especially the case when the input images to a CNN have some specific centered structure; for which we expect completely different features to be learned on different spatial locations. 
+One practical example is when the inputs are faces that have been centered in the image: we might expect different eye-specific or hair-specific features to be learned in different parts of the image. 
+In that case it is common to relax the parameter sharing scheme, and instead simply call the layer a "locally connected layer". 
+Time series forecasting Another important concept of CNNs is pooling, which is a form of non-linear down-sampling. 
+There are several non-linear functions to implement pooling, where max pooling is the most common. It partitions the input image into a set of rectangles and, for each such sub-region, outputs the maximum. 
+Cultural Heritage and 3D-datasets Intuitively, the exact location of a feature is less important than its rough location relative to other features. 
+This is the idea behind the use of pooling in convolutional neural networks. The pooling layer serves to progressively reduce the spatial size of the representation, to reduce the number of parameters, memory footprint and amount of computation in the network, and hence to also control overfitting. 
+This is known as down-sampling. It is common to periodically insert a pooling layer between successive convolutional layers (each one typically followed by an activation function, such as a ReLU layer) in a CNN architecture.: 460–461  While pooling layers contribute to local translation invariance, they do not provide global translation invariance in a CNN, unless a form of global pooling is used. 
+The pooling layer commonly operates independently on every depth, or slice, of the input and resizes it spatially. 
+A very common form of max pooling is a layer with filters of size 2×2, applied with a stride of 2, which subsamples every depth slice in the input by 2 along both width and height, discarding 75% of the activations:fX,Y(S)=maxa,b=01S2X+a,2Y+b.{\displaystyle f_{X,Y}(S)=\max _{a,b=0}^{1}S_{2X+a,2Y+b}.}In this case, every max operation is over 4 numbers. 
+The depth dimension remains unchanged (this is true for other forms of pooling as well). Fine-tuning In addition to max pooling, pooling units can use other functions, such as average pooling or ℓ2-norm pooling. 
+Average pooling was often used historically but has recently fallen out of favor compared to max pooling, which generally performs better in practice. 
+Human interpretable explanations Due to the effects of fast spatial reduction of the size of the representation, there is a recent trend towards using smaller filters or discarding pooling layers altogether. 
+Related architectures "Region of Interest" pooling (also known as RoI pooling) is a variant of max pooling, in which output size is fixed and input rectangle is a parameter. 
+Deep Q-networks Pooling is a downsampling method and an important component of convolutional neural networks for object detection based on the Fast R-CNN architecture. 
+ Deep belief networks A CMP operation layer conducts the MP operation along the channel side among the corresponding positions of the consecutive feature maps for the purpose of redundant information elimination. 
+The CMP makes the significant features gather together within fewer channels, which is important for fine-grained image classification that needs more discriminating features. 
+Meanwhile, another advantage of the CMP operation is to make the channel number of feature maps smaller before it connects to the first fully connected (FC) layer. 
+Similar to the MP operation, we denote the input feature maps and output feature maps of a CMP layer as F ∈ R(C×M×N) and C ∈ R(c×M×N), respectively, where C and c are the channel numbers of the input and output feature maps, M and N are the widths and the height of the feature maps, respectively. 
+Note that the CMP operation only changes the channel number of the feature maps. The width and the height of the feature maps are not changed, which is different from the MP operation. 
+Notable libraries ReLU is the abbreviation of rectified linear unit, which applies the non-saturating activation function f(x)=max(0,x){\textstyle f(x)=\max(0,x)}. 
+It effectively removes negative values from an activation map by setting them to zero. It introduces nonlinearities to the decision function and in the overall network without affecting the receptive fields of the convolution layers. 
+See also Other functions can also be used to increase nonlinearity, for example the saturating hyperbolic tangent f(x)=tanh⁡(x){\displaystyle f(x)=\tanh(x)}, f(x)=|tanh⁡(x)|{\displaystyle f(x)=|\tanh(x)|}, and the sigmoid function σ(x)=(1+e−x)−1{\textstyle \sigma (x)=(1+e^{-x})^{-1}}. 
+ReLU is often preferred to other functions because it trains the neural network several times faster without a significant penalty to generalization accuracy. 
+Notes After several convolutional and max pooling layers, the final classification is done via fully connected layers. 
+Neurons in a fully connected layer have connections to all activations in the previous layer, as seen in regular (non-convolutional) artificial neural networks. 
+Their activations can thus be computed as an affine transformation, with matrix multiplication followed by a bias offset (vector addition of a learned or fixed bias term). 
+References The "loss layer", or "loss function", specifies how training penalizes the deviation between the predicted output of the network, and the true data labels (during supervised learning). 
+Various loss functions can be used, depending on the specific task. Ext. 
+In statistical classification, two main approaches are called the generative approach and the discriminative approach. 
+These compute classifiers by different approaches, differing in the degree of statistical modelling. 
+Terminology is inconsistent, but three major types can be distinguished, following Jebara (2004): Definition The distinction between these last two classes is not consistently made; Jebara (2004) refers to these three classes as generative learning, conditional learning, and discriminative learning, but Ng & Jordan (2002) only distinguish two classes, calling them generative classifiers (joint distribution) and discriminative classifiers (conditional distribution or no distribution), not distinguishing between the latter two classes. 
+Analogously, a classifier based on a generative model is a generative classifier, while a classifier based on a discriminative model is a discriminative classifier, though this term also refers to classifiers that are not based on a model. 
+Relationships between models Standard examples of each, all of which are linear classifiers, are: Contrast with discriminative classifiers In application to classification, one wishes to go from an observation x to a label y (or probability distribution on labels). 
+One can compute this directly, without using a probability distribution (distribution-free classifier); one can estimate the probability of a label given an observation, P(Y|X=x){\displaystyle P(Y|X=x)} (discriminative model), and base classification on that; or one can estimate the joint distribution P(X,Y){\displaystyle P(X,Y)} (generative model), from that compute the conditional probability P(Y|X=x){\displaystyle P(Y|X=x)}, and then base classification on that. 
+These are increasingly indirect, but increasingly probabilistic, allowing more domain knowledge and probability theory to be applied. 
+In practice different approaches are used, depending on the particular problem, and hybrids can combine strengths of multiple approaches. 
+Deep generative models An alternative division defines these symmetrically as: Types Regardless of precise definition, the terminology is constitutional because a generative model can be used to "generate" random instances (outcomes), either of an observation and target (x,y){\displaystyle (x,y)}, or of an observation x given a target value y, while a discriminative model or discriminative classifier (without a model) can be used to "discriminate" the value of the target variable Y, given an observation x. 
+The difference between "discriminate" (distinguish) and "classify" is subtle, and these are not consistently distinguished. 
+(The term "discriminative classifier" becomes a pleonasm when "discrimination" is equivalent to "classification".) Generative models The term "generative model" is also used to describe models that generate instances of output variables in a way that has no clear relationship to probability distributions over potential samples of input variables. 
+Generative adversarial networks are examples of this class of generative models, and are judged primarily by the similarity of particular outputs to potential inputs. 
+Such models are not classifiers. Discriminative models In application to classification, the observable X is frequently a continuous variable, the target Y is generally a discrete variable consisting of a finite set of labels, and the conditional probability P(Y∣X){\displaystyle P(Y\mid X)} can also be interpreted as a (non-deterministic) target function f:X→Y{\displaystyle f\colon X\to Y}, considering X as inputs and Y as outputs. 
+Examples Given a finite set of labels, the two definitions of "generative model" are closely related. 
+A model of the conditional distribution P(X∣Y=y){\displaystyle P(X\mid Y=y)} is a model of the distribution of each label, and a model of the joint distribution is equivalent to a model of the distribution of label values P(Y){\displaystyle P(Y)}, together with the distribution of observations given a label, P(X∣Y){\displaystyle P(X\mid Y)}; symbolically, P(X,Y)=P(X∣Y)P(Y).{\displaystyle P(X,Y)=P(X\mid Y)P(Y).} Thus, while a model of the joint probability distribution is more informative than a model of the distribution of label (but without their relative frequencies), it is a relatively small step, hence these are not always distinguished. 
+Simple example Given a model of the joint distribution, P(X,Y){\displaystyle P(X,Y)}, the distribution of the individual variables can be computed as the marginal distributions P(X)=∑yP(X,Y=y){\displaystyle P(X)=\sum _{y}P(X,Y=y)} and P(Y)=∫xP(Y,X=x){\displaystyle P(Y)=\int _{x}P(Y,X=x)} (considering X as continuous, hence integrating over it, and Y as discrete, hence summing over it), and either conditional distribution can be computed from the definition of conditional probability: P(X∣Y)=P(X,Y)/P(Y){\displaystyle P(X\mid Y)=P(X,Y)/P(Y)} and P(Y∣X)=P(X,Y)/P(X){\displaystyle P(Y\mid X)=P(X,Y)/P(X)}. 
+Text generation Given a model of one conditional probability, and estimated probability distributions for the variables X and Y, denoted P(X){\displaystyle P(X)} and P(Y){\displaystyle P(Y)}, one can estimate the opposite conditional probability using Bayes' rule: See also For example, given a generative model for P(X∣Y){\displaystyle P(X\mid Y)}, one can estimate: Notes and given a discriminative model for P(Y∣X){\displaystyle P(Y\mid X)}, one can estimate: References Note that Bayes' rule (computing one conditional probability in terms of the other) and the definition of conditional probability (computing conditional probability in terms of the joint distribution) are frequently conflated as well. 
+Ext. 
+Machine learning (ML) is a field of inquiry devoted to understanding and building methods that "learn" – that is, methods that leverage data to improve performance on some set of tasks. 
+It is seen as a part of artificial intelligence.  Overview Machine learning algorithms build a model based on sample data, known as training data, in order to make predictions or decisions without being explicitly programmed to do so. 
+Machine learning algorithms are used in a wide variety of applications, such as in medicine, email filtering, speech recognition, agriculture, and computer vision, where it is difficult or unfeasible to develop conventional algorithms to perform the needed tasks. 
+History and relationships to other fields A subset of machine learning is closely related to computational statistics, which focuses on making predictions using computers, but not all machine learning is statistical learning. 
+The study of mathematical optimization delivers methods, theory and application domains to the field of machine learning. 
+Data mining is a related field of study, focusing on exploratory data analysis through unsupervised learning. 
+Artificial intelligence Some implementations of machine learning use data and neural networks in a way that mimics the working of a biological brain. 
+Data mining In its application across business problems, machine learning is also referred to as predictive analytics. 
+Optimization Learning algorithms work on the basis that strategies, algorithms, and inferences that worked well in the past are likely to continue working well in the future. 
+These inferences can be obvious, such as "since the sun rose every morning for the last 10,000 days, it will probably rise tomorrow morning as well". 
+They can be nuanced, such as "X% of families have geographically separate species with color variants, so there is a Y% chance that undiscovered black swans exist". 
+Generalization Machine learning programs can perform tasks without being explicitly programmed to do so. 
+It involves computers learning from data provided so that they carry out certain tasks. For simple tasks assigned to computers, it is possible to program algorithms telling the machine how to execute all steps required to solve the problem at hand; on the computer's part, no learning is needed. 
+For more advanced tasks, it can be challenging for a human to manually create the needed algorithms. 
+In practice, it can turn out to be more effective to help the machine develop its own algorithm, rather than having human programmers specify every needed step. 
+Statistics The discipline of machine learning employs various approaches to teach computers to accomplish tasks where no fully satisfactory algorithm is available. 
+In cases where vast numbers of potential answers exist, one approach is to label some of the correct answers as valid. 
+This can then be used as training data for the computer to improve the algorithm(s) it uses to determine correct answers. 
+For example, to train a system for the task of digital character recognition, the MNIST dataset of handwritten digits has often been used. 
+Physics The term machine learning was coined in 1959 by Arthur Samuel, an IBM employee and pioneer in the field of computer gaming and artificial intelligence. 
+The synonym self-teaching computers was also used in this time period.  Theory By the early 1960s an experimental "learning machine" with punched tape memory, called CyberTron, had been developed by Raytheon Company to analyze sonar signals, electrocardiograms, and speech patterns using rudimentary reinforcement learning. 
+It was repetitively "trained" by a human operator/teacher to recognize patterns and equipped with a "goof" button to cause it to re-evaluate incorrect decisions. 
+A representative book on research into machine learning during the 1960s was Nilsson's book on Learning Machines, dealing mostly with machine learning for pattern classification. 
+Interest related to pattern recognition continued into the 1970s, as described by Duda and Hart in 1973. 
+In 1981 a report was given on using teaching strategies so that a neural network learns to recognize 40 characters (26 letters, 10 digits, and 4 special symbols) from a computer terminal. 
+Approaches Tom M. Mitchell provided a widely quoted, more formal definition of the algorithms studied in the machine learning field: "A computer program is said to learn from experience E with respect to some class of tasks T and performance measure P if its performance at tasks in T, as measured by P,  improves with experience E." This definition of the tasks in which machine learning is concerned offers a fundamentally operational definition rather than defining the field in cognitive terms. 
+This follows Alan Turing's proposal in his paper "Computing Machinery and Intelligence", in which the question "Can machines think?" is replaced with the question "Can machines do what we (as thinking entities) can do?". 
+Supervised learning Modern-day machine learning has two objectives, one is to classify data based on models which have been developed, the other purpose is to make predictions for future outcomes based on these models. 
+A hypothetical algorithm specific to classifying data may use computer vision of moles coupled with supervised learning in order to train it to classify the cancerous moles. 
+A machine learning algorithm for stock trading may inform the trader of future potential predictions. 
+Unsupervised learning As a scientific endeavor, machine learning grew out of the quest for artificial intelligence. 
+In the early days of AI as an academic discipline, some researchers were interested in having machines learn from data. 
+They attempted to approach the problem with various symbolic methods, as well as what was then termed "neural networks"; these were mostly perceptrons and other models that were later found to be reinventions of the generalized linear models of statistics. 
+Probabilistic reasoning was also employed, especially in automated medical diagnosis.: 488  Semi-supervised learning However, an increasing emphasis on the logical, knowledge-based approach caused a rift between AI and machine learning. 
+Probabilistic systems were plagued by theoretical and practical problems of data acquisition and representation.: 488  By 1980, expert systems had come to dominate AI, and statistics was out of favor. 
+Work on symbolic/knowledge-based learning did continue within AI, leading to inductive logic programming, but the more statistical line of research was now outside the field of AI proper, in pattern recognition and information retrieval.: 708–710, 755  Neural networks research had been abandoned by AI and computer science around the same time. 
+This line, too, was continued outside the AI/CS field, as "connectionism", by researchers from other disciplines including Hopfield, Rumelhart, and Hinton. 
+Their main success came in the mid-1980s with the reinvention of backpropagation.: 25  Reinforcement learning Machine learning (ML), reorganized as a separate field, started to flourish in the 1990s. 
+The field changed its goal from achieving artificial intelligence to tackling solvable problems of a practical nature. 
+It shifted focus away from the symbolic approaches it had inherited from AI, and toward methods and models borrowed from statistics, fuzzy logic, and probability theory. 
+Dimensionality reduction Machine learning and data mining often employ the same methods and overlap significantly, but while machine learning focuses on prediction, based on known properties learned from the training data, data mining focuses on the discovery of (previously) unknown properties in the data (this is the analysis step of knowledge discovery in databases). 
+Data mining uses many machine learning methods, but with different goals; on the other hand, machine learning also employs data mining methods as "unsupervised learning" or as a preprocessing step to improve learner accuracy. 
+Much of the confusion between these two research communities (which do often have separate conferences and separate journals, ECML PKDD being a major exception) comes from the basic assumptions they work with: in machine learning, performance is usually evaluated with respect to the ability to reproduce known knowledge, while in knowledge discovery and data mining (KDD) the key task is the discovery of previously unknown knowledge. 
+Evaluated with respect to known knowledge, an uninformed (unsupervised) method will easily be outperformed by other supervised methods, while in a typical KDD task, supervised methods cannot be used due to the unavailability of training data. 
+Other types Machine learning also has intimate ties to optimization: many learning problems are formulated as minimization of some loss function on a training set of examples. 
+Loss functions express the discrepancy between the predictions of the model being trained and the actual problem instances (for example, in classification, one wants to assign a label to instances, and models are trained to correctly predict the pre-assigned labels of a set of examples). 
+Self-learning The difference between optimization and machine learning arises from the goal of generalization: while optimization algorithms can minimize the loss on a training set, machine learning is concerned with minimizing the loss on unseen samples. 
+Characterizing the generalization of various learning algorithms is an active topic of current research, especially for deep learning algorithms. 
+Feature learning Machine learning and statistics are closely related fields in terms of methods, but distinct in their principal goal: statistics draws population inferences from a sample, while machine learning finds generalizable predictive patterns. 
+According to Michael I. Jordan, the ideas of machine learning, from methodological principles to theoretical tools, have had a long pre-history in statistics. 
+He also suggested the term data science as a placeholder to call the overall field. Sparse dictionary learning Leo Breiman distinguished two statistical modeling paradigms: data model and algorithmic model, wherein "algorithmic model" means more or less the machine learning algorithms like Random Forest. 
+Anomaly detection Some statisticians have adopted methods from machine learning, leading to a combined field that they call statistical learning. 
+Robot learning Analytical and computational techniques derived from statistical physics of disordered systems, can be extended to large-scale problems, including machine learning, e.g., to analyze the weight space of deep neural networks. 
+Statistical physics is thus finding applications in the area of medical diagnostics. Association rules A core objective of a learner is to generalize from its experience. 
+Generalization in this context is the ability of a learning machine to perform accurately on new, unseen examples/tasks after having experienced a learning data set. 
+The training examples come from some generally unknown probability distribution (considered representative of the space of occurrences) and the learner has to build a general model about this space that enables it to produce sufficiently accurate predictions in new cases. 
+Models The computational analysis of machine learning algorithms and their performance is a branch of theoretical computer science known as computational learning theory via the Probably Approximately Correct Learning (PAC) model. 
+Because training sets are finite and the future is uncertain, learning theory usually does not yield guarantees of the performance of algorithms. 
+Instead, probabilistic bounds on the performance are quite common. The bias–variance decomposition is one way to quantify generalization error. 
+Artificial neural networks For the best performance in the context of generalization, the complexity of the hypothesis should match the complexity of the function underlying the data. 
+If the hypothesis is less complex than the function, then the model has under fitted the data. If the complexity of the model is increased in response, then the training error decreases. 
+But if the hypothesis is too complex, then the model is subject to overfitting and generalization will be poorer. 
+Decision trees In addition to performance bounds, learning theorists study the time complexity and feasibility of learning. 
+In computational learning theory, a computation is considered feasible if it can be done in polynomial time. 
+There are two kinds of time complexity results: Positive results show that a certain class of functions can be learned in polynomial time. 
+Negative results show that certain classes cannot be learned in polynomial time. Support-vector machines Machine learning approaches are traditionally divided into three broad categories, which correspond to learning paradigms, depending on the nature of the "signal" or "feedback" available to the learning system: Regression analysis Supervised learning algorithms build a mathematical model of a set of data that contains both the inputs and the desired outputs. 
+The data is known as training data, and consists of a set of training examples. Each training example has one or more inputs and the desired output, also known as a supervisory signal. 
+ In the mathematical model, each training example is represented by an array or vector, sometimes called a feature vector, and the training data is represented by a matrix. 
+Through iterative optimization of an objective function, supervised learning algorithms learn a function that can be used to predict the output associated with new inputs. 
+An optimal function will allow the algorithm to correctly determine the output for inputs that were not a part of the training data. 
+An algorithm that improves the accuracy of its outputs or predictions over time is said to have learned to perform that task. 
+Bayesian networks Types of supervised-learning algorithms include active learning, classification and regression. 
+Classification algorithms are used when the outputs are restricted to a limited set of values, and regression algorithms are used when the outputs may have any numerical value within a range. 
+As an example, for a classification algorithm that filters emails, the input would be an incoming email, and the output would be the name of the folder in which to file the email. 
+Gaussian processes Similarity learning is an area of supervised machine learning closely related to regression and classification, but the goal is to learn from examples using a similarity function that measures how similar or related two objects are. 
+It has applications in ranking, recommendation systems, visual identity tracking, face verification, and speaker verification. 
+Genetic algorithms Unsupervised learning algorithms take a set of data that contains only inputs, and find structure in the data, like grouping or clustering of data points. 
+The algorithms, therefore, learn from test data that has not been labeled, classified or categorized. 
+Instead of responding to feedback, unsupervised learning algorithms identify commonalities in the data and react based on the presence or absence of such commonalities in each new piece of data. 
+A central application of unsupervised learning is in the field of density estimation in statistics, such as finding the probability density function. 
+Though unsupervised learning encompasses other domains involving summarizing and explaining data features. 
+Training models Cluster analysis is the assignment of a set of observations into subsets (called clusters) so that observations within the same cluster are similar according to one or more predesignated criteria, while observations drawn from different clusters are dissimilar. 
+Different clustering techniques make different assumptions on the structure of the data, often defined by some similarity metric and evaluated, for example, by internal compactness, or the similarity between members of the same cluster, and separation, the difference between clusters. 
+Other methods are based on estimated density and graph connectivity. Federated learning Semi-supervised learning falls between unsupervised learning (without any labeled training data) and supervised learning (with completely labeled training data). 
+Some of the training examples are missing training labels, yet many machine-learning researchers have found that unlabeled data, when used in conjunction with a small amount of labeled data, can produce a considerable improvement in learning accuracy. 
+Applications In weakly supervised learning, the training labels are noisy, limited, or imprecise; however, these labels are often cheaper to obtain, resulting in larger effective training sets. 
+Limitations Reinforcement learning is an area of machine learning concerned with how software agents ought to take actions in an environment so as to maximize some notion of cumulative reward. 
+Due to its generality, the field is studied in many other disciplines, such as game theory, control theory, operations research, information theory, simulation-based optimization, multi-agent systems, swarm intelligence, statistics and genetic algorithms. 
+In machine learning, the environment is typically represented as a Markov decision process (MDP). Many reinforcements learning algorithms use dynamic programming techniques. 
+Reinforcement learning algorithms do not assume knowledge of an exact mathematical model of the MDP and are used when exact models are infeasible. 
+Reinforcement learning algorithms are used in autonomous vehicles or in learning to play a game against a human opponent. 
+Bias Dimensionality reduction is a process of reducing the number of random variables under consideration by obtaining a set of principal variables. 
+In other words, it is a process of reducing the dimension of the feature set, also called the "number of features". 
+Most of the dimensionality reduction techniques can be considered as either feature elimination or extraction. 
+One of the popular methods of dimensionality reduction is principal component analysis (PCA). PCA involves changing higher-dimensional data (e.g., 3D) to a smaller space (e.g., 2D). 
+This results in a smaller dimension of data (2D instead of 3D), while keeping all original variables in the model without changing the data.The manifold hypothesis proposes that high-dimensional data sets lie along low-dimensional manifolds, and many dimensionality reduction techniques make this assumption, leading to the area of manifold learning and manifold regularization. 
+Explainability Other approaches have been developed which don't fit neatly into this three-fold categorization, and sometimes more than one is used by the same machine learning system. 
+For example, topic modeling, meta-learning. Overfitting As of 2022, deep learning is the dominant approach for much ongoing work in the field of machine learning. 
+Other limitations and vulnerabilities Self-learning, as a machine learning paradigm was introduced in 1982 along with a neural network capable of self-learning, named crossbar adaptive array (CAA). 
+It is learning with no external rewards and no external teacher advice. The CAA self-learning algorithm computes, in a crossbar fashion, both decisions about actions and emotions (feelings) about consequence situations. 
+The system is driven by the interaction between cognition and emotion.The self-learning algorithm updates a memory matrix W =||w(a,s)|| such that in each iteration executes the following machine learning routine:  Model assessments It is a system with only one input, situation, and only one output, action (or behavior) a. 
+There is neither a separate reinforcement input nor an advice input from the environment. The backpropagated value (secondary reinforcement) is the emotion toward the consequence situation. 
+The CAA exists in two environments, one is the behavioral environment where it behaves, and the other is the genetic environment, wherefrom it initially and only once receives initial emotions about situations to be encountered in the behavioral environment. 
+After receiving the genome (species) vector from the genetic environment, the CAA learns a goal-seeking behavior, in an environment that contains both desirable and undesirable situations. 
+Ethics Several learning algorithms aim at discovering better representations of the inputs provided during training. 
+Classic examples include principal component analysis and cluster analysis. Feature learning algorithms, also called representation learning algorithms, often attempt to preserve the information in their input but also transform it in a way that makes it useful, often as a pre-processing step before performing classification or predictions. 
+This technique allows reconstruction of the inputs coming from the unknown data-generating distribution, while not being necessarily faithful to configurations that are implausible under that distribution. 
+This replaces manual feature engineering, and allows a machine to both learn the features and use them to perform a specific task. 
+Hardware Feature learning can be either supervised or unsupervised. In supervised feature learning, features are learned using labeled input data. 
+Examples include artificial neural networks, multilayer perceptrons, and supervised dictionary learning. 
+In unsupervised feature learning, features are learned with unlabeled input data.  Examples include dictionary learning, independent component analysis, autoencoders, matrix factorization and various forms of clustering. 
+Neuromorphic/Physical Neural Networks Manifold learning algorithms attempt to do so under the constraint that the learned representation is low-dimensional. 
+Sparse coding algorithms attempt to do so under the constraint that the learned representation is sparse, meaning that the mathematical model has many zeros. 
+Multilinear subspace learning algorithms aim to learn low-dimensional representations directly from tensor representations for multidimensional data, without reshaping them into higher-dimensional vectors. 
+Deep learning algorithms discover multiple levels of representation, or a hierarchy of features, with higher-level, more abstract features defined in terms of (or generating) lower-level features. 
+It has been argued that an intelligent machine is one that learns a representation that disentangles the underlying factors of variation that explain the observed data. 
+Embedded Machine Learning Feature learning is motivated by the fact that machine learning tasks such as classification often require input that is mathematically and computationally convenient to process. 
+However, real-world data such as images, video, and sensory data has not yielded attempts to algorithmically define specific features. 
+An alternative is to discover such features or representations through examination, without relying on explicit algorithms. 
+Software Sparse dictionary learning is a feature learning method where a training example is represented as a linear combination of basis functions, and is assumed to be a sparse matrix. 
+The method is strongly NP-hard and difficult to solve approximately. A popular heuristic method for sparse dictionary learning is the K-SVD algorithm. 
+Sparse dictionary learning has been applied in several contexts. In classification, the problem is to determine the class to which a previously unseen training example belongs. 
+For a dictionary where each class has already been built, a new training example is associated with the class that is best sparsely represented by the corresponding dictionary. 
+Sparse dictionary learning has also been applied in image de-noising. The key idea is that a clean image patch can be sparsely represented by an image dictionary, but the noise cannot. 
+Free and open-source software In data mining, anomaly detection, also known as outlier detection, is the identification of rare items, events or observations which raise suspicions by differing significantly from the majority of the data. 
+Typically, the anomalous items represent an issue such as bank fraud, a structural defect, medical problems or errors in a text. 
+Anomalies are referred to as outliers, novelties, noise, deviations and exceptions. Proprietary software with free and open-source editions In particular, in the context of abuse and network intrusion detection, the interesting objects are often not rare objects, but unexpected bursts of inactivity. 
+This pattern does not adhere to the common statistical definition of an outlier as a rare object. Many outlier detection methods (in particular, unsupervised algorithms) will fail on such data unless aggregated appropriately. 
+Instead, a cluster analysis algorithm may be able to detect the micro-clusters formed by these patterns. 
+Proprietary software Three broad categories of anomaly detection techniques exist. Unsupervised anomaly detection techniques detect anomalies in an unlabeled test data set under the assumption that the majority of the instances in the data set are normal, by looking for instances that seem to fit the least to the remainder of the data set. 
+Supervised anomaly detection techniques require a data set that has been labeled as "normal" and "abnormal" and involves training a classifier (the key difference to many other statistical classification problems is the inherently unbalanced nature of outlier detection). 
+Semi-supervised anomaly detection techniques construct a model representing normal behavior from a given normal training data set and then test the likelihood of a test instance to be generated by the model. 
+Journals Robot learning is inspired by a multitude of machine learning methods, starting from supervised learning, reinforcement learning, and finally meta-learning (e.g. 
+MAML). Conferences Association rule learning is a rule-based machine learning method for discovering relationships between variables in large databases. 
+It is intended to identify strong rules discovered in databases using some measure of "interestingness". 
+See also Rule-based machine learning is a general term for any machine learning method that identifies, learns, or evolves "rules" to store, manipulate or apply knowledge. 
+The defining characteristic of a rule-based machine learning algorithm is the identification and utilization of a set of relational rules that collectively represent the knowledge captured by the system. 
+This is in contrast to other machine learning algorithms that commonly identify a singular model that can be universally applied to any instance in order to make a prediction. 
+Rule-based machine learning approaches include learning classifier systems, association rule learning, and artificial immune systems. 
+References Based on the concept of strong rules, Rakesh Agrawal, Tomasz Imieliński and Arun Swami introduced association rules for discovering regularities between products in large-scale transaction data recorded by point-of-sale (POS) systems in supermarkets. 
+For example, the rule {onions,potatoes}⇒{burger}{\displaystyle \{\mathrm {onions,potatoes} \}\Rightarrow \{\mathrm {burger} \}} found in the sales data of a supermarket would indicate that if a customer buys onions and potatoes together, they are likely to also buy hamburger meat. 
+Such information can be used as the basis for decisions about marketing activities such as promotional pricing or product placements. 
+In addition to market basket analysis, association rules are employed today in application areas including Web usage mining, intrusion detection, continuous production, and bioinformatics. 
+In contrast with sequence mining, association rule learning typically does not consider the order of items either within a transaction or across transactions. 
+Sources Learning classifier systems (LCS) are a family of rule-based machine learning algorithms that combine a discovery component, typically a genetic algorithm, with a learning component, performing either supervised learning, reinforcement learning, or unsupervised learning. 
+They seek to identify a set of context-dependent rules that collectively store and apply knowledge in a piecewise manner in order to make predictions. 
+Further reading Inductive logic programming (ILP) is an approach to rule learning using logic programming as a uniform representation for input examples, background knowledge, and hypotheses. 
+Given an encoding of the known background knowledge and a set of examples represented as a logical database of facts, an ILP system will derive a hypothesized logic program that entails all positive and no negative examples. 
+Inductive programming is a related field that considers any kind of programming language for representing hypotheses (and not only logic programming), such as functional programs. 
+Ext. 
+A feedforward neural network (FNN) is an artificial neural network wherein connections between the nodes do not form a cycle. 
+As such, it is different from its  descendant: recurrent neural networks. Linear neural network The feedforward neural network was the first and simplest type of artificial neural network devised. 
+In this network, the information moves in only one direction—forward—from the input nodes, through the hidden nodes (if any) and to the output nodes. 
+There are no cycles or loops in the network. Single-layer perceptron The simplest kind of feedforward neural network is a linear network, which consists of a single layer of output nodes; the inputs are fed directly to the outputs via a series of weights. 
+The sum of the products of the weights and the inputs is calculated in each node. The mean squared errors between these calculated outputs and a given target values are minimized by creating an adjustment to the weights. 
+This technique has been known for over two centuries as the method of least squares or linear regression. 
+It was used as a means of finding a good rough linear fit to a set of points by Legendre (1805) and Gauss (1795) for the prediction of planetary movement. 
+Multi-layer perceptron The single-layer perceptron combines a linear neural network with a threshold function. 
+If the output value is above some threshold (typically 0) the neuron fires and takes the activated value (typically 1); otherwise it takes the deactivated value (typically -1). 
+Neurons with this kind of activation function are often called  linear threshold units. In the literature the term perceptron often refers to networks consisting of just one of these units. 
+Similar "neurons" were described in physics by Ernst Ising and Wilhelm Lenz for the Ising model in the 1920s, and by Warren McCulloch and Walter Pitts in the 1940s. 
+Other feedforward networks A perceptron can be created using any values for the activated and deactivated states as long as the threshold value lies between the two. 
+See also Perceptrons can be trained by a simple learning algorithm that is usually called the delta rule. 
+It calculates the errors between calculated output and sample output data, and uses this to create an adjustment to the weights, thus implementing a form of gradient descent. 
+References Single-layer perceptrons are only capable of learning linearly separable patterns; in 1969 in a famous monograph titled Perceptrons, Marvin Minsky and Seymour Papert showed that it was impossible for a single-layer perceptron network to learn an XOR function. 
+Nonetheless, it was known that multi-layer perceptrons (MLPs) are capable of producing any possible boolean function. 
+For example, already in 1967, Shun'ichi Amari trained an MLP by stochastic gradient descent. Ext. 
+A recurrent neural network (RNN) is a class of artificial neural networks where connections between nodes can create a cycle, allowing output from some nodes to affect subsequent input to the same nodes. 
+This allows it to exhibit temporal dynamic behavior. Derived from feedforward neural networks, RNNs can use their internal state (memory) to process variable length sequences of inputs. 
+This makes them applicable to tasks such as unsegmented, connected handwriting recognition or speech recognition. 
+Recurrent neural networks are theoretically Turing complete and can run arbitrary programs to process arbitrary sequences of inputs. 
+History The term "recurrent neural network" is used to refer to the class of networks with an infinite impulse response, whereas "convolutional neural network" refers to the class of finite impulse response. 
+Both classes of networks exhibit temporal dynamic behavior. A finite impulse recurrent network is a directed acyclic graph that can be unrolled and replaced with a strictly feedforward neural network, while an infinite impulse recurrent network is a directed cyclic graph that can not be unrolled. 
+LSTM Both finite impulse and infinite impulse recurrent networks can have additional stored states, and the storage can be under direct control by the neural network. 
+The storage can also be replaced by another network or graph if that incorporates time delays or has feedback loops. 
+Such controlled states are referred to as gated state or gated memory, and are part of long short-term memory networks (LSTMs) and gated recurrent units. 
+This is also called Feedback Neural Network (FNN). Architectures The Ising model (1925) by Wilhelm Lenz and Ernst Isingwas a first RNN architecture that did not learn. 
+Shun'ichi Amari made it adaptive in 1972. This was also called the Hopfield network (1982). See also David Rumelhart's work in 1986. 
+ In 1993, a neural history compressor system solved a "Very Deep Learning" task that required more than 1000 subsequent layers in an RNN unfolded in time. 
+Fully recurrent Long short-term memory (LSTM) networks were invented by Hochreiter and Schmidhuber in 1997 and set accuracy records in multiple applications domains. 
+Elman networks and Jordan networks Around 2007, LSTM started to revolutionize speech recognition, outperforming traditional models in certain speech applications. 
+In 2009, a Connectionist Temporal Classification (CTC)-trained LSTM network was the first RNN to win pattern recognition contests when it won several competitions in connected handwriting recognition. 
+In 2014, the Chinese company Baidu used CTC-trained RNNs to break the 2S09 Switchboard Hub5'00 speech recognition dataset benchmark without using any traditional speech processing methods. 
+Hopfield LSTM also improved large-vocabulary speech recognition and text-to-speech synthesis and was used in Google Android. 
+In 2015, Google's speech recognition reportedly experienced a dramatic performance jump of 49% through CTC-trained LSTM. 
+Bidirectional associative memory LSTM broke records for improved machine translation, Language Modeling and Multilingual Language Processing. 
+LSTM combined with convolutional neural networks (CNNs) improved automatic image captioning. Echo state RNNs come in many variants. 
+Independently RNN (IndRNN) Fully recurrent neural networks (FRNN) connect the outputs of all neurons to the inputs of all neurons. 
+ This is the most general neural network topology because all other topologies can be represented by setting some connection weights to zero to simulate the lack of connections between those neurons. 
+ The illustration to the right may be misleading to many because practical neural network topologies are frequently organized in "layers" and the drawing gives that appearance. 
+ However, what appears to be layers are, in fact, different steps in time of the same fully recurrent neural network. 
+ The left-most item in the illustration shows the recurrent connections as the arc labeled 'v'.  It is "unfolded" in time to produce the appearance of layers. 
+Recursive An Elman network is a three-layer network (arranged horizontally as x, y, and z in the illustration) with the addition of a set of context units (u in the illustration). 
+The middle (hidden) layer is connected to these context units fixed with a weight of one. At each time step, the input is fed forward and a learning rule is applied. 
+The fixed back-connections save a copy of the previous values of the hidden units in the context units (since they propagate over the connections before the learning rule is applied). 
+Thus the network can maintain a sort of state, allowing it to perform such tasks as sequence-prediction that are beyond the power of a standard multilayer perceptron. 
+Neural history compressor Jordan networks are similar to Elman networks. The context units are fed from the output layer instead of the hidden layer. 
+The context units in a Jordan network are also referred to as the state layer. They have a recurrent connection to themselves. 
+Second order RNNs Elman and Jordan networks are also known as "Simple recurrent networks" (SRN). Long short-term memory Variables and functions Gated recurrent unit The Hopfield network is an RNN in which all connections across layers are equally sized. 
+It requires stationary inputs and is thus not a general RNN, as it does not process sequences of patterns. 
+However, it guarantees that it will converge. If the connections are trained using Hebbian learning then the Hopfield network can perform as robust content-addressable memory, resistant to connection alteration. 
+Bi-directional Introduced by Bart Kosko, a bidirectional associative memory (BAM) network is a variant of a Hopfield network that stores associative data as a vector. 
+The bi-directionality comes from passing information through a matrix and its transpose. Typically, bipolar encoding is preferred to binary encoding of the associative pairs. 
+Recently, stochastic BAM models using Markov stepping were optimized for increased network stability and relevance to real-world applications. 
+Continuous-time A BAM network has two layers, either of which can be driven as an input to recall an association and produce an output on the other layer. 
+Hierarchical recurrent neural network The echo state network (ESN) has a sparsely connected random hidden layer. 
+The weights of output neurons are the only part of the network that can change (be trained). ESNs are good at reproducing certain time series. 
+A variant for spiking neurons is known as a liquid state machine. Recurrent multilayer perceptron network The Independently recurrent neural network (IndRNN) addresses the gradient vanishing and exploding problems in the traditional fully connected RNN. 
+Each neuron in one layer only receives its own past state as context information (instead of full connectivity to all other neurons in this layer) and thus neurons are independent of each other's history. 
+The gradient backpropagation can be regulated to avoid gradient vanishing and exploding in order to keep long or short-term memory. 
+The cross-neuron information is explored in the next layers. IndRNN can be robustly trained with the non-saturated nonlinear functions such as ReLU. 
+Using skip connections, deep networks can be trained. Multiple timescales model A recursive neural network is created by applying the same set of weights recursively over a differentiable graph-like structure by traversing the structure in topological order. 
+Such networks are typically also trained by the reverse mode of automatic differentiation. They can process distributed representations of structure, such as logical terms. 
+A special case of recursive neural networks is the RNN whose structure corresponds to a linear chain. 
+Recursive neural networks have been applied to natural language processing. The Recursive Neural Tensor Network uses a tensor-based composition function for all nodes in the tree. 
+Neural Turing machines The neural history compressor is an unsupervised stack of RNNs. At the input level, it learns to predict its next input from the previous inputs. 
+Only unpredictable inputs of some RNN in the hierarchy become inputs to the next higher level RNN, which therefore recomputes its internal state only rarely. 
+Each higher level RNN thus studies a compressed representation of the information in the RNN below. 
+This is done such that the input sequence can be precisely reconstructed from the representation at the highest level. 
+Differentiable neural computer The system effectively minimises the description length or the negative logarithm of the probability of the data. 
+Given a lot of learnable predictability in the incoming data sequence, the highest level RNN can use supervised learning to easily classify even deep sequences with long intervals between important events. 
+Neural network pushdown automata It is possible to distill the RNN hierarchy into two RNNs: the "conscious" chunker (higher level) and the "subconscious" automatizer (lower level). 
+Once the chunker has learned to predict and compress inputs that are unpredictable by the automatizer, then the automatizer can be forced in the next learning phase to predict or imitate through additional units the hidden units of the more slowly changing chunker. 
+This makes it easy for the automatizer to learn appropriate, rarely changing memories across long intervals. 
+In turn, this helps the automatizer to make many of its once unpredictable inputs predictable, such that the chunker can focus on the remaining unpredictable events. 
+Memristive Networks A generative model partially overcame the vanishing gradient problem of automatic differentiation or backpropagation in neural networks in 1992. 
+In 1993, such a system solved a "Very Deep Learning" task that required more than 1000 subsequent layers in an RNN unfolded in time. 
+Training Second order RNNs use higher order weights wijk{\displaystyle w{}_{ijk}} instead of the standard wij{\displaystyle w{}_{ij}} weights, and states can be a product. 
+This allows a direct mapping to a finite-state machine both in training, stability, and representation. 
+Long short-term memory is an example of this but has no such formal mappings or proof of stability. 
+Gradient descent Long short-term memory (LSTM) is a deep learning system that avoids the vanishing gradient problem. 
+LSTM is normally augmented by recurrent gates called "forget gates". LSTM prevents backpropagated errors from vanishing or exploding. 
+Instead, errors can flow backwards through unlimited numbers of virtual layers unfolded in space. That is, LSTM can learn tasks that require memories of events that happened thousands or even millions of discrete time steps earlier. 
+Problem-specific LSTM-like topologies can be evolved. LSTM works even given long delays between significant events and can handle signals that mix low and high frequency components. 
+Global optimization methods Many applications use stacks of LSTM RNNs and train them by Connectionist Temporal Classification (CTC) to find an RNN weight matrix that maximizes the probability of the label sequences in a training set, given the corresponding input sequences. 
+CTC achieves both alignment and recognition. Related fields and models LSTM can learn to recognize context-sensitive languages unlike previous models based on hidden Markov models (HMM) and similar concepts. 
+Libraries Gated recurrent units (GRUs) are a gating mechanism in recurrent neural networks introduced in 2014. 
+They are used in the full form and several simplified variants. Their performance on polyphonic music modeling and speech signal modeling was found to be similar to that of long short-term memory. 
+They have fewer parameters than LSTM, as they lack an output gate. Applications Bi-directional RNNs use a finite sequence to predict or label each element of the sequence based on the element's past and future contexts. 
+This is done by concatenating the outputs of two RNNs, one processing the sequence from left to right, the other one from right to left. 
+The combined outputs are the predictions of the teacher-given target signals. This technique has been proven to be especially useful when combined with LSTM RNNs. 
+References A continuous-time recurrent neural network (CTRNN) uses a system of ordinary differential equations to model the effects on a neuron of the incoming inputs. 
+Further reading For a neuron i{\displaystyle i} in the network with activation yi{\displaystyle y_{i}}, the rate of change of activation is given by: Ext. 
+A transformer is a deep learning model that adopts the mechanism of self-attention, differentially weighting the significance of each part of the input data. 
+It is used primarily in the fields of natural language processing (NLP) and computer vision (CV). Background Like recurrent neural networks (RNNs), transformers are designed to process sequential input data, such as natural language, with applications towards tasks such as translation and text summarization. 
+However, unlike RNNs, transformers process the entire input all at once. The attention mechanism provides context for any position in the input sequence. 
+For example, if the input data is a natural language sentence, the transformer does not have to process one word at a time. 
+This allows for more parallelization than RNNs and therefore reduces training times. Sequential processing Transformers were introduced in 2017 by a team at Google Brain and are increasingly becoming the model of choice for NLP problems, replacing RNN models such as long short-term memory (LSTM). 
+The additional training parallelization allows training on larger datasets. This led to the development of pretrained systems such as BERT (Bidirectional Encoder Representations from Transformers) and GPT (Generative Pre-trained Transformer), which were trained with large language datasets, such as the Wikipedia Corpus and Common Crawl, and can be fine-tuned for specific tasks. 
+Self-attention Before transformers, most state-of-the-art NLP systems relied on gated RNNs, such as LSTMs and gated recurrent units (GRUs), with added attention mechanisms. 
+Transformers also make use of attention mechanisms but, unlike RNNs, do not have a recurrent structure. 
+This means that provided with enough training data, attention mechanisms alone can match the performance of RNNs with attention. 
+Architecture Gated RNNs process tokens sequentially, maintaining a state vector that contains a representation of the data seen prior to the current token. 
+To process the n{\textstyle n}th token, the model combines the state representing the sentence up to token n−1{\textstyle n-1} with the information of the new token to create a new state, representing the sentence up to token n{\textstyle n}. 
+Theoretically, the information from one token can propagate arbitrarily far down the sequence, if at every point the state continues to encode contextual information about the token. 
+In practice this mechanism is flawed: the vanishing gradient problem leaves the model's state at the end of a long sentence without precise, extractable information about preceding tokens.The dependency of token computations on the results of previous token computations also makes it hard to parallelize computation on modern deep-learning hardware. 
+This can make the training of RNNs inefficient. Input These problems were addressed by attention mechanisms. 
+Attention mechanisms let a model draw from the state at any preceding point along the sequence. The attention layer can access all previous states and weigh them according to a learned measure of relevance, providing relevant information about far-away tokens. 
+Encoder–decoder architecture A clear example of the value of attention is in language translation, where context is essential to assign the meaning of a word in a sentence. 
+In an English-to-French translation system, the first word of the French output most probably depends heavily on the first few words of the English input. 
+However, in a classic LSTM model, in order to produce the first word of the French output, the model is given only the state vector after processing the last English word. 
+Theoretically, this vector can encode information about the whole English sentence, giving the model all the necessary knowledge. 
+In practice, this information is often poorly preserved by the LSTM. An attention mechanism can be added to address this problem: the decoder is given access to the state vectors of every English input word, not just the last, and can learn attention weights that dictate how much to attend to each English input state vector. 
+Scaled dot-product attention When added to RNNs, attention mechanisms increase performance. The development of the Transformer architecture revealed that attention mechanisms were powerful in themselves and that sequential recurrent processing of data was not necessary to achieve the quality gains of RNNs with attention. 
+Transformers use an attention mechanism without an RNN, processing all tokens simultaneously and calculating attention weights between them in successive layers. 
+Since the attention mechanism only uses information about other tokens from lower layers, it can be computed for all tokens in parallel, which leads to improved training speed. 
+Multi-head attention The input text is parsed into tokens by a byte pair encoding tokenizer, and each token is converted via a word embedding into a vector. 
+Then, positional information of the token is added to the word embedding. Masked attention Like earlier seq2seq models, the original Transformer model used an encoder–decoder architecture. 
+The encoder consists of encoding layers that process the input iteratively one layer after another, while the decoder consists of decoding layers that do the same thing to the encoder's output. 
+Encoder The function of each encoder layer is to generate encodings that contain information about which parts of the inputs are relevant to each other. 
+It passes its encodings to the next encoder layer as inputs. Each decoder layer does the opposite, taking all the encodings and using their incorporated contextual information to generate an output sequence. 
+To achieve this, each encoder and decoder layer makes use of an attention mechanism. Positional encoding For each part of the input, attention weighs the relevance of every other part and draws from them to produce the output. 
+Each decoder layer has an additional attention mechanism that draws information from the outputs of previous decoders, before the decoder layer draws information from the encodings. 
+Decoder Both the encoder and decoder layers have a feed-forward neural network for additional processing of the outputs and contain residual connections and layer normalization steps. 
+Alternatives The transformer building blocks are scaled dot-product attention units. When a sentence is passed into a transformer model, attention weights are calculated between every token simultaneously. 
+The attention unit produces embeddings for every token in context that contain information about the token itself along with a weighted combination of other relevant tokens each weighted by its attention weight. 
+Training For each attention unit, the transformer model learns three weight matrices; the query weights WQ{\displaystyle W_{Q}}, the key weights WK{\displaystyle W_{K}}, and the value weights WV{\displaystyle W_{V}}. 
+For each token i{\displaystyle i}, the input word embedding xi{\displaystyle x_{i}} is multiplied with each of the three weight matrices to produce a query vector qi=xiWQ{\displaystyle q_{i}=x_{i}W_{Q}}, a key vector ki=xiWK{\displaystyle k_{i}=x_{i}W_{K}}, and a value vector vi=xiWV{\displaystyle v_{i}=x_{i}W_{V}}. 
+Attention weights are calculated using the query and key vectors: the attention weight aij{\displaystyle a_{ij}} from token i{\displaystyle i} to token j{\displaystyle j} is the dot product between qi{\displaystyle q_{i}} and kj{\displaystyle k_{j}}. 
+The attention weights are divided by the square root of the dimension of the key vectors, dk{\displaystyle {\sqrt {d_{k}}}}, which stabilizes gradients during training, and passed through a softmax which normalizes the weights. 
+The fact that WQ{\displaystyle W_{Q}} and WK{\displaystyle W_{K}} are different matrices allows attention to be non-symmetric: if token i{\displaystyle i} attends to token j{\displaystyle j} (i.e. 
+qi⋅kj{\displaystyle q_{i}\cdot k_{j}} is large), this does not necessarily mean that token j{\displaystyle j} will attend to token i{\displaystyle i} (i.e. 
+qj⋅ki{\displaystyle q_{j}\cdot k_{i}} could be small).  The output of the attention unit for token i{\displaystyle i} is the weighted sum of the value vectors of all tokens, weighted by aij{\displaystyle a_{ij}}, the attention from token i{\displaystyle i} to each token. 
+Methods for stabilizing training The attention calculation for all tokens can be expressed as one large matrix calculation using the softmax function, which is useful for training due to computational matrix operation optimizations that quickly compute matrix operations. 
+The matrices Q{\displaystyle Q}, K{\displaystyle K} and V{\displaystyle V} are defined as the matrices where the i{\displaystyle i}th rows are vectors qi{\displaystyle q_{i}}, ki{\displaystyle k_{i}}, and vi{\displaystyle v_{i}} respectively. 
+Then we can represent the attention as Pretrain-finetune Attention(Q,K,V)=softmax(QKTdk)V{\displaystyle {\begin{aligned}{\text{Attention}}(Q,K,V)={\text{softmax}}\left({\frac {QK^{\mathrm {T} }}{\sqrt {d_{k}}}}\right)V\end{aligned}}} Applications where softmax is taken over the horizontal axis. 
+Implementations One set of (WQ,WK,WV){\displaystyle \left(W_{Q},W_{K},W_{V}\right)} matrices is called an attention head, and each layer in a transformer model has multiple attention heads. 
+While each attention head attends to the tokens that are relevant to each token, with multiple attention heads the model can do this for different definitions of "relevance". 
+In addition, the influence field representing relevance can become progressively dilated in successive layers. 
+Many transformer attention heads encode relevance relations that are meaningful to humans. For example, some attention heads can attend mostly to the next word, while others mainly attend from verbs to their direct objects. 
+The computations for each attention head can be performed in parallel, which allows for fast processing. 
+The outputs for the attention layer are concatenated to pass into the feed-forward neural network layers. 
+See also Concretely, let the multiple attention heads be indexed by i{\displaystyle i}, then we haveMultiheadedAttention(Q,K,V)=Concat(Attention(QWiQ,KWiK,VWiV))WO{\displaystyle {\text{MultiheadedAttention}}(Q,K,V)={\text{Concat}}({\text{Attention}}(QW_{i}^{Q},KW_{i}^{K},VW_{i}^{V}))W^{O}} where the matrices WiQ,WiK,WiV{\displaystyle W_{i}^{Q},W_{i}^{K},W_{i}^{V}} are "projection matrices" owned by individual attention head i{\displaystyle i}, and WO{\displaystyle W^{O}} is a final projection matrix owned by the whole multi-headed attention head. 
+References It may be necessary to cut out attention links between some word-pairs. For example, the decoder for token position t{\displaystyle t} should not have access to token position t+1{\displaystyle t+1}. 
+This may be accomplished before the softmax stage by adding a mask matrix M{\displaystyle M} that is negative infinity at entries where the attention link must be cut, and zero at other places. 
+Furt. 
+A transformer is a deep learning model that adopts the mechanism of self-attention, differentially weighting the significance of each part of the input data. 
+It is used primarily in the fields of natural language processing (NLP) and computer vision (CV). Background Like recurrent neural networks (RNNs), transformers are designed to process sequential input data, such as natural language, with applications towards tasks such as translation and text summarization. 
+However, unlike RNNs, transformers process the entire input all at once. The attention mechanism provides context for any position in the input sequence. 
+For example, if the input data is a natural language sentence, the transformer does not have to process one word at a time. 
+This allows for more parallelization than RNNs and therefore reduces training times. Sequential processing Transformers were introduced in 2017 by a team at Google Brain and are increasingly becoming the model of choice for NLP problems, replacing RNN models such as long short-term memory (LSTM). 
+The additional training parallelization allows training on larger datasets. This led to the development of pretrained systems such as BERT (Bidirectional Encoder Representations from Transformers) and GPT (Generative Pre-trained Transformer), which were trained with large language datasets, such as the Wikipedia Corpus and Common Crawl, and can be fine-tuned for specific tasks. 
+Self-attention Before transformers, most state-of-the-art NLP systems relied on gated RNNs, such as LSTMs and gated recurrent units (GRUs), with added attention mechanisms. 
+Transformers also make use of attention mechanisms but, unlike RNNs, do not have a recurrent structure. 
+This means that provided with enough training data, attention mechanisms alone can match the performance of RNNs with attention. 
+Architecture Gated RNNs process tokens sequentially, maintaining a state vector that contains a representation of the data seen prior to the current token. 
+To process the n{\textstyle n}th token, the model combines the state representing the sentence up to token n−1{\textstyle n-1} with the information of the new token to create a new state, representing the sentence up to token n{\textstyle n}. 
+Theoretically, the information from one token can propagate arbitrarily far down the sequence, if at every point the state continues to encode contextual information about the token. 
+In practice this mechanism is flawed: the vanishing gradient problem leaves the model's state at the end of a long sentence without precise, extractable information about preceding tokens.The dependency of token computations on the results of previous token computations also makes it hard to parallelize computation on modern deep-learning hardware. 
+This can make the training of RNNs inefficient. Input These problems were addressed by attention mechanisms. 
+Attention mechanisms let a model draw from the state at any preceding point along the sequence. The attention layer can access all previous states and weigh them according to a learned measure of relevance, providing relevant information about far-away tokens. 
+Encoder–decoder architecture A clear example of the value of attention is in language translation, where context is essential to assign the meaning of a word in a sentence. 
+In an English-to-French translation system, the first word of the French output most probably depends heavily on the first few words of the English input. 
+However, in a classic LSTM model, in order to produce the first word of the French output, the model is given only the state vector after processing the last English word. 
+Theoretically, this vector can encode information about the whole English sentence, giving the model all the necessary knowledge. 
+In practice, this information is often poorly preserved by the LSTM. An attention mechanism can be added to address this problem: the decoder is given access to the state vectors of every English input word, not just the last, and can learn attention weights that dictate how much to attend to each English input state vector. 
+Scaled dot-product attention When added to RNNs, attention mechanisms increase performance. The development of the Transformer architecture revealed that attention mechanisms were powerful in themselves and that sequential recurrent processing of data was not necessary to achieve the quality gains of RNNs with attention. 
+Transformers use an attention mechanism without an RNN, processing all tokens simultaneously and calculating attention weights between them in successive layers. 
+Since the attention mechanism only uses information about other tokens from lower layers, it can be computed for all tokens in parallel, which leads to improved training speed. 
+Multi-head attention The input text is parsed into tokens by a byte pair encoding tokenizer, and each token is converted via a word embedding into a vector. 
+Then, positional information of the token is added to the word embedding. Masked attention Like earlier seq2seq models, the original Transformer model used an encoder–decoder architecture. 
+The encoder consists of encoding layers that process the input iteratively one layer after another, while the decoder consists of decoding layers that do the same thing to the encoder's output. 
+Encoder The function of each encoder layer is to generate encodings that contain information about which parts of the inputs are relevant to each other. 
+It passes its encodings to the next encoder layer as inputs. Each decoder layer does the opposite, taking all the encodings and using their incorporated contextual information to generate an output sequence. 
+To achieve this, each encoder and decoder layer makes use of an attention mechanism. Positional encoding For each part of the input, attention weighs the relevance of every other part and draws from them to produce the output. 
+Each decoder layer has an additional attention mechanism that draws information from the outputs of previous decoders, before the decoder layer draws information from the encodings. 
+Decoder Both the encoder and decoder layers have a feed-forward neural network for additional processing of the outputs and contain residual connections and layer normalization steps. 
+Alternatives The transformer building blocks are scaled dot-product attention units. When a sentence is passed into a transformer model, attention weights are calculated between every token simultaneously. 
+The attention unit produces embeddings for every token in context that contain information about the token itself along with a weighted combination of other relevant tokens each weighted by its attention weight. 
+Training For each attention unit, the transformer model learns three weight matrices; the query weights WQ{\displaystyle W_{Q}}, the key weights WK{\displaystyle W_{K}}, and the value weights WV{\displaystyle W_{V}}. 
+For each token i{\displaystyle i}, the input word embedding xi{\displaystyle x_{i}} is multiplied with each of the three weight matrices to produce a query vector qi=xiWQ{\displaystyle q_{i}=x_{i}W_{Q}}, a key vector ki=xiWK{\displaystyle k_{i}=x_{i}W_{K}}, and a value vector vi=xiWV{\displaystyle v_{i}=x_{i}W_{V}}. 
+Attention weights are calculated using the query and key vectors: the attention weight aij{\displaystyle a_{ij}} from token i{\displaystyle i} to token j{\displaystyle j} is the dot product between qi{\displaystyle q_{i}} and kj{\displaystyle k_{j}}. 
+The attention weights are divided by the square root of the dimension of the key vectors, dk{\displaystyle {\sqrt {d_{k}}}}, which stabilizes gradients during training, and passed through a softmax which normalizes the weights. 
+The fact that WQ{\displaystyle W_{Q}} and WK{\displaystyle W_{K}} are different matrices allows attention to be non-symmetric: if token i{\displaystyle i} attends to token j{\displaystyle j} (i.e. 
+qi⋅kj{\displaystyle q_{i}\cdot k_{j}} is large), this does not necessarily mean that token j{\displaystyle j} will attend to token i{\displaystyle i} (i.e. 
+qj⋅ki{\displaystyle q_{j}\cdot k_{i}} could be small).  The output of the attention unit for token i{\displaystyle i} is the weighted sum of the value vectors of all tokens, weighted by aij{\displaystyle a_{ij}}, the attention from token i{\displaystyle i} to each token. 
+Methods for stabilizing training The attention calculation for all tokens can be expressed as one large matrix calculation using the softmax function, which is useful for training due to computational matrix operation optimizations that quickly compute matrix operations. 
+The matrices Q{\displaystyle Q}, K{\displaystyle K} and V{\displaystyle V} are defined as the matrices where the i{\displaystyle i}th rows are vectors qi{\displaystyle q_{i}}, ki{\displaystyle k_{i}}, and vi{\displaystyle v_{i}} respectively. 
+Then we can represent the attention as Pretrain-finetune Attention(Q,K,V)=softmax(QKTdk)V{\displaystyle {\begin{aligned}{\text{Attention}}(Q,K,V)={\text{softmax}}\left({\frac {QK^{\mathrm {T} }}{\sqrt {d_{k}}}}\right)V\end{aligned}}} Applications where softmax is taken over the horizontal axis. 
+Implementations One set of (WQ,WK,WV){\displaystyle \left(W_{Q},W_{K},W_{V}\right)} matrices is called an attention head, and each layer in a transformer model has multiple attention heads. 
+While each attention head attends to the tokens that are relevant to each token, with multiple attention heads the model can do this for different definitions of "relevance". 
+In addition, the influence field representing relevance can become progressively dilated in successive layers. 
+Many transformer attention heads encode relevance relations that are meaningful to humans. For example, some attention heads can attend mostly to the next word, while others mainly attend from verbs to their direct objects. 
+The computations for each attention head can be performed in parallel, which allows for fast processing. 
+The outputs for the attention layer are concatenated to pass into the feed-forward neural network layers. 
+See also Concretely, let the multiple attention heads be indexed by i{\displaystyle i}, then we haveMultiheadedAttention(Q,K,V)=Concat(Attention(QWiQ,KWiK,VWiV))WO{\displaystyle {\text{MultiheadedAttention}}(Q,K,V)={\text{Concat}}({\text{Attention}}(QW_{i}^{Q},KW_{i}^{K},VW_{i}^{V}))W^{O}} where the matrices WiQ,WiK,WiV{\displaystyle W_{i}^{Q},W_{i}^{K},W_{i}^{V}} are "projection matrices" owned by individual attention head i{\displaystyle i}, and WO{\displaystyle W^{O}} is a final projection matrix owned by the whole multi-headed attention head. 
+References It may be necessary to cut out attention links between some word-pairs. For example, the decoder for token position t{\displaystyle t} should not have access to token position t+1{\displaystyle t+1}. 
+This may be accomplished before the softmax stage by adding a mask matrix M{\displaystyle M} that is negative infinity at entries where the attention link must be cut, and zero at other places. 
+Furt. 
+In natural language processing (NLP), a word embedding is a representation of a word. The embedding is used in text analysis. 
+Typically, the representation is a real-valued vector that encodes the meaning of the word in such a way that words that are closer in the vector space are expected to be similar in meaning. 
+Word embeddings can be obtained using language modeling and feature learning techniques, where words or phrases from the vocabulary are mapped to vectors of real numbers. 
+Development and history of the approach Methods to generate this mapping include neural networks, dimensionality reduction on the word co-occurrence matrix, probabilistic models, explainable knowledge base method, and explicit representation in terms of the context in which words appear. 
+Polysemy and homonymy Word and phrase embeddings, when used as the underlying input representation, have been shown to boost the performance in NLP tasks such as syntactic parsing and sentiment analysis. 
+For biological sequences: BioVectors In Distributional semantics, a quantitative methodological approach to understanding meaning in observed language, word embeddings or semantic vector space models have been used as a knowledge representation for some time. 
+Such models aim to quantify and categorize semantic similarities between linguistic items based on their distributional properties in large samples of language data. 
+ The underlying idea that "a word is characterized by the company it keeps" was proposed in a 1957 article by John Rupert Firth, but also has roots in the contemporaneous work on search systems and in cognitive psychology. 
+Game design The notion of a semantic space with lexical items (words or multi-word terms) represented as vectors or embeddings is based on the computational challenges of capturing distributional characteristics and using them for practical application to measure similarity between words, phrases, or entire documents. 
+The first generation of semantic space models is the vector space model for information retrieval. Such vector space models for words and their distributional data implemented in their simplest form results in a very sparse vector space of high dimensionality (cf. 
+Curse of dimensionality). Reducing the number of dimensions using linear algebraic methods such as singular value decomposition then led to the introduction of latent semantic analysis in the late 1980s and the Random indexing approach for collecting word cooccurrence contexts. 
+In 2000 Bengio et al. provided in a series of papers the "Neural probabilistic language models" to reduce the high dimensionality of words representations in contexts by "learning a distributed representation for words". 
+Sentence embeddings A study published in NeurIPS (NIPS) 2002 introduced the use of both word and document embeddings applying the method of kernel CCA to bilingual (and multi-lingual) corpora, also providing an early example of self-supervised learning of word embeddings  Software Word embeddings come in two different styles, one in which words are expressed as vectors of co-occurring words, and another in which words are expressed as vectors of linguistic contexts in which the words occur; these different styles are studied in (Lavelli et al., 2004). 
+Roweis and Saul published in Science how to use "locally linear embedding" (LLE) to discover representations of high dimensional data structures. 
+Most new word embedding techniques after about 2005 rely on a neural network architecture instead of more probabilistic and algebraic models, since some foundational work by Yoshua Bengio and colleagues. 
+Examples of application The approach has been adopted by many research groups after advances around year 2010 had been made on theoretical work on the quality of vectors and the training speed of the model and hardware advances allowed for a broader parameter space to be explored profitably. 
+In 2013, a team at Google led by Tomas Mikolov created word2vec, a word embedding toolkit that can train vector space models faster than the previous approaches. 
+The word2vec approach has been widely used in experimentation and was instrumental in raising interest for word embeddings as a technology, moving the research strand out of specialised research into broader experimentation and eventually paving the way for practical application. 
+Ethical Implications Historically, one of the main limitations of static word embeddings or word vector space models is that words with multiple meanings are conflated into a single representation (a single vector in the semantic space). 
+In other words, polysemy and homonymy are not handled properly. For example, in the sentence "The club I tried yesterday was great!", it is not clear if the term club is related to the word sense of a club sandwich, baseball club, clubhouse, golf club, or any other sense that club might have. 
+The necessity to accommodate multiple meanings per word in different vectors (multi-sense embeddings) is the motivation for several contributions in NLP to split single-sense embeddings into multi-sense ones. 
+See also Most approaches that produce multi-sense embeddings can be divided into two main categories for their word sense representation, i.e., unsupervised and knowledge-based. 
+Based on word2vec skip-gram, Multi-Sense Skip-Gram (MSSG) performs word-sense discrimination and embedding simultaneously, improving its training time, while assuming a specific number of senses for each word. 
+In the Non-Parametric Multi-Sense Skip-Gram (NP-MSSG) this number can vary depending on each word. Combining the prior knowledge of lexical databases (e.g., WordNet, ConceptNet, BabelNet), word embeddings and word sense disambiguation, Most Suitable Sense Annotation (MSSA) labels word-senses through an unsupervised and knowledge-based approach, considering a word's context in a pre-defined sliding window. 
+Once the words are disambiguated, they can be used in a standard word embeddings technique, so multi-sense embeddings are produced. 
+MSSA architecture allows the disambiguation and annotation process to be performed recurrently in a self-improving manner.. 
+Bidirectional Encoder Representations from Transformers (BERT) is a family of masked-language models published in 2018 by researchers at Google. 
+A 2020 literature survey concluded that "in a little over a year, BERT has become a ubiquitous baseline in NLP experiments counting over 150 research publications analyzing and improving the model." Architecture BERT was originally implemented in the English language at two model sizes: (1) BERTBASE: 12 encoders with 12 bidirectional self-attention heads totaling 110 million parameters, and (2) BERTLARGE: 24 encoders with 16 bidirectional self-attention heads totaling 340 million parameters. 
+Both models were pre-trained on the Toronto BookCorpus (800M words) and English Wikipedia  (2,500M words). 
+Performance BERT is based on the transformer architecture. Specifically, BERT is composed of Transformer encoder layers. 
+Analysis BERT was pre-trained simultaneously on two tasks:  language modeling (15% of tokens were masked, and the training objective was to predict the original token given its context) and next sentence prediction (the training objective was to classify if two spans of text appeared sequentially in the training corpus). 
+As a result of this training process, BERT learns latent representations of words and sentences in context. 
+After pre-training, BERT can be fine-tuned with fewer resources on smaller datasets to optimize its performance on specific tasks such as NLP tasks (language inference, text classification) and sequence-to-sequence based language generation tasks (question-answering, conversational response generation). 
+The pre-training stage is significantly more computationally expensive than fine-tuning. History When BERT was published, it achieved state-of-the-art performance on a number of natural language understanding tasks: Recognition The reasons for BERT's state-of-the-art performance on these natural language understanding tasks are not yet well understood. 
+Current research has focused on investigating the relationship behind BERT's output as a result of carefully chosen input sequences, analysis of internal vector representations through probing classifiers, and the relationships represented by attention weights.The high performance of the BERT model could also be attributed to the fact that it is bidirectionally trained. 
+This means that BERT, based on the Transformer model architecture, applies its self-attention mechanism to learn information from a text from the left and right side during training, and consequently gains a deep understanding of the context. 
+For example, the word fine can have two different meanings depending on the context (I feel fine today, She has fine blond hair). 
+ BERT considers the words surrounding the target word fine from the left and right side. References However it comes at a cost: due to encoder-only architecture lacking a decoder, BERT can't be prompted and can't generate text, while bidirectional models in general do not work effectively without the right side, thus being difficult to prompt, with even short text generation requiring sophisticated computationally expensive techniques. 
+Further reading In contrast to deep learning neural networks which require very large amounts of data, BERT has already been pre-trained which means that it has learnt the representations of the words and sentences as well as the underlying semantic relations that they are connected with. 
+BERT can then be fine-tuned on smaller datasets for specific tasks such as sentiment classification. 
+The pre-trained models are chosen according to the content of the given dataset one uses but also the goal of the task. 
+For example, if the task is a sentiment classification task on financial data, a pre-trained model for the analysis of sentiment of financial text should be chosen. 
+The weights of the original pre-trained models were released on Github. Ext. 
+Generative pre-trained transformers (GPT) are a family of language models developed by OpenAI generally trained on a large corpus of text data such that they can generate human-like text. 
+They are built using several blocks of the transformer architecture. They can be fine-tuned for various natural language processing (NLP) tasks such as text generation, language translation, and text classification. 
+The "pre-training" in its name refers to the initial training process on a large text corpus in which the model learns to predict the next word in a passage, which provides a solid foundation for the model to perform well on downstream tasks with limited amounts of task-specific data. 
+List of products On June 11, 2018, OpenAI released a paper entitled "Improving Language Understanding by Generative Pre-Training", in which they introduced the Generative Pre-trained Transformer (GPT). 
+At that point, the best-performing neural NLP models mostly employed supervised learning from large amounts of manually labeled data. 
+This reliance on supervised learning limited their use on datasets that were not well-annotated, and also made it prohibitively expensive and time-consuming to train extremely large models. 
+Many languages (such as Swahili or Haitian Creole) are difficult to translate and interpret using such models due to a lack of available text for corpus-building. 
+In contrast, GPT's "semi-supervised" approach involved two stages: an unsupervised generative "pre-training" stage in which a language modeling objective was used to set initial parameters, and a supervised discriminative "fine-tuning" stage in which these parameters were adapted to a target task.. 
+In machine learning, fine-tuning is an approach to transfer learning in which the weights of a pre-trained model are trained on new data. 
+Fine-tuning can be done on a subset of the layers of a neural network or on the entire network. In the first case, the layers that are not being fine-tuned are "frozen" and not updated during backpropagation step. 
+ See also For some architectures, such as convolutional neural networks, it is common to keep the earlier layers frozen because they have been shown to capture lower-level features, unlike the later layers which often focus on high-level features that can be more related to the specific task that the model is trained on.. 
+Generative Pre-trained Transformer 2 (GPT-2)  is an open-source artificial intelligence created by OpenAI in February 2019. 
+GPT-2 translates text, answers questions, summarizes passages, and generates text output on a level that, while sometimes indistinguishable from that of humans, can become repetitive or nonsensical when generating long passages. 
+It is a general-purpose learner; it was not specifically trained to do any of these tasks, and its ability to perform them is an extension of its general ability to accurately synthesize the next item in an arbitrary sequence. 
+GPT-2 was created as a "direct scale-up" of OpenAI's 2018 GPT model, with a ten-fold increase in both its parameter count and the size of its training dataset. 
+Background The GPT architecture implements a deep neural network, specifically a transformer model, which uses attention in place of previous recurrence- and convolution-based architectures. 
+Attention mechanisms allow the model to selectively focus on segments of input text it predicts to be the most relevant. 
+This model allows for greatly increased parallelization, and outperforms previous benchmarks for RNN/CNN/LSTM-based models. 
+Computational linguistics OpenAI released the complete version of the GPT-2 language model (with 1.5 billion parameters) in November 2019. 
+GPT-2 was to be followed by the 175-billion-parameter GPT-3, revealed to the public in 2020 (whose source code has never been made available). 
+Access to GPT-3 is provided exclusively through APIs offered by OpenAI and Microsoft. Neural networks Since the origins of computing, artificial intelligence has been an object of study; the "imitation game", postulated by Alan Turing in 1950 (and often called the "Turing test") proposed to establish an electronic or mechanical system's capacity for intelligent action by an evaluator's ability to distinguish its behavior from that of a human. 
+The term "machine learning" was first used to describe a possible approach to artificial intelligence as early as 1959 by IBM researcher Arthur Samuel; current use of the term encompasses a broad variety of statistical learning, data science and neural network approaches to computational problems (often falling under the aegis of artificial intelligence). 
+Machine learning for natural language processing Natural language processing using computers, a task originally conceived as a subfield of computational linguistics,  was attempted as soon as computing hardware had the capacity; the first application of a dictionary look-up table was developed at Birkbeck College in London in 1948. 
+The 1954 Georgetown Experiment was a demonstration of fully automated machine translation, in which sixty Russian sentences were translated into English (mostly by replacement of words with their English synonyms). 
+The translations were often crude; the system had only 6 grammar rules and a 250-word vocabulary, and no attempt was made to analyze or translate syntactic structure. 
+However, the experiment proved to the public that computers could interpret and process natural language, and secured CIA funding for further research. 
+Direct substitution remains a standard against which machine translation programs are evaluated. Selective focusing Systems for using natural language in human-computer interaction (HCI) also began to emerge in the mid-20th century. 
+SHRDLU, a program developed at MIT in 1968–1970, consisted of a virtual environment of several objects which a user interacted with through commands in natural language (e.g."Find a block which is taller than the one you are holding and put it into the box"). 
+ELIZA, a chatterbot written in 1966, analyzed a human interlocutor's text for keywords and provided conversationally appropriate responses. 
+While many subjects claimed an inability to distinguish ELIZA's conversation from that of a human, the question of whether this constituted intelligence proved contentious (the most famous script parodied a psychotherapist by, largely, repeating what the user had said back to them). 
+Attention mechanisms While initial attempts at machine translation had been purely computational, by the 1950s the dominant approach to computational linguistics had come to emphasize Noam Chomsky's concept of universal grammar;  NLP research in that era, accordingly, consisted largely of attempts to reduce statements in arbitrary languages to putative underlying language-agnostic logical structures. 
+In the 1970s, semantic NLP systems would begin to eschew syntactic encodings in favor of more general semantic encodings. 
+However, until the advent of neural networks, most systems continued to rely on large (and increasingly unwieldly) sets of manually programmed rules, which failed to scale up as initially predicted. 
+Transformers The field of artificial intelligence continued to develop in the late 20th century, but occasional periods of stagnation known as "AI winters" occurred. 
+Various sources posit AI winters as having occurred at different times; in 1994, Howe described one as having started in 1973 and lasting a decade, while Russell & Norvig in 2003 described another as starting soon after 1988. 
+Generative Pre-trained Transformer An early concept in artificial intelligence, connectionism, sought to produce intelligent behavior through artificial neural networks designed to simulate the behavior of neurons in biological brains. 
+The first example of an artificial neural network was the SNARC, built in 1951. The perceptron (a type of binary classifier) was introduced in 1957 by psychologist Frank Rosenblatt; his machine was designed for image recognition using 400 photocells connected to "neurons", with weightings determined by potentiometers (and adjusted with electric motors during its learning process). 
+Perceptron systems became the subject of great interest; a New York Times article described the perceptron as "the embryo of an electronic computer that  expects will be able to walk, talk, see, write, reproduce itself and be conscious of its existence". 
+Perceptron systems, however, fell out of favor for decades following a 1969 book by Marvin Minsky and Seymour Papert (Perceptrons: an introduction to computational geometry), which pointed out several shortcomings of the then-present state of the art (single-layer perceptrons), including an inability to encode the exclusive or (XOR) function. 
+The book was considered, at the time, to discredit the perceptron approach (as well as neural networks in general) as a promising area of research. 
+Corpus Neural networks become capable of classifying different inputs (i.e. sorting them into distinct categories) through a process known as "learning". 
+This begins with the network's weights (the amount by which each neuron's "activation" influences the activation of each specific neuron in the subsequent layer) being initialized to random quantities; in this state, the output of the network is similarly random. 
+An objective function, like a loss function, is defined, which is capable of quantitatively measuring how close the output of the network is to its desired performance (for example, how often an input consisting of a handwritten number results in the sole activation of the output neuron corresponding to that number). 
+From this, and from the performance of the network, the weights can be adjusted in order to improve its performance. 
+Architecture Backpropagation, a supervised algorithm first applied to machine learning systems in Paul Werbos' 1974 dissertation, efficiently calculates "gradients", which are vector fields describing the optimal adjustment of all weights in the entire network for a given input/output example. 
+The use of these gradients to train neural networks, a practice known as gradient descent, enabled the creation of much more complex systems, and wide-scale application of neural networks to natural language processing would occur in the 1980s. 
+In 1985, D.B. Parker would rediscover Werbos' method; in 1986, Rumelhart, Hinton and Williams would apply it to generate internal representations of incoming data in neural networks with hidden layers, referred to as "deep learning" networks; this research would later form the basis for recurrent neural networks. 
+Performance Traditional feed-forward neural networks (FFNNs) are so named because each layer takes in output from the previous layer, and feeds it into the next; a FFNN's structure contains no "cycles" where information flows backwards. 
+In contrast, a recurrent neural network (RNN) has at least one cycle of activation flow. RNNs are often used for processing sequences of data (and predicting future sequence items), since the network can process each item using both the item itself and its own output from processing the previous item. 
+Scale-up The neocognitron, proposed by Kunihiko Fukushima in 1979 based on models of neural architecture in the mammalian visual cortex, provided the basis for convolutional neural networks (CNNs), often used in image processing. 
+By "sliding" a small layer over a larger input, a CNN can perform deeper processing with less computation. 
+For example, a 100×100 image has 10,000 pixels, which would require 10,000 weights to process with a fully connected layer; a convolutional layer consisting of a 5×5 "window" sliding over the image can perform edge detection using only 25 learnable parameters. 
+Convolutional layers are combined by "pooling layers", and processed by "fully connected" layers (which are typically multilayer perceptrons). 
+Training Due to their ability to process sequential information, recurrent neural networks have seen use in many NLP applications; unlike FFNNs, they are capable of encoding different weights (and giving different output) for identical items based on their surroundings in a sequence—that is to say, a RNN system that parsed one word at a time could still associate a "black dog" with fuzzy paws, a "corn dog" with ketchup, and a "sun dog" with refraction. 
+Moreover, since the retention of information from previous sequence items can be performed recursively, RNN systems can be designed that recall items arbitrarily far back in a sequence: for example, being able to continue the sequences "Tom looked at the black dog", "Tom looked at the corn dog", and "Tom looked at the sun dog" with "fondly", "hungrily", and "indirectly", respectively. 
+Performance While capable of impressive solutions, many-layered FFNNs and RNNs both proved vulnerable to the vanishing gradient problem: since gradients (encoded as finite-precision numbers) are required to backpropagate across all layers of a model, they can "vanish" to zero (or "explode" to infinity) over a sufficiently large number of layers. 
+The long short-term memory network (LSTM), first proposed by Sepp Hochreiter and Jürgen Schmidhuber in 1995–1997, sought to resolve this issue by introducing a novel architecture consisting of multiple distinct "cells" with "input", "output" and "forget" gates. 
+In 2009, an LSTM-based model submitted by Alex Graves' team won the ICDAR competition for handwriting recognition; another was the most accurate model in the competition and a third was the fastest. 
+Release Another issue RNNs and LSTMs encounter is that they can only take into account the context of previous sequence items. 
+This can create issues when parsing sentences like "Tom rode his bike to the store, put out the kickstand, and turned off the engine", in which the necessary context of the "bike" being a motorcycle is revealed only at the end. 
+One method of solving problems like this is the bidirectional LSTM, which proceeds in both directions simultaneously, giving access to both "past" and "future" input features. 
+Conditional random fields use tags to connect inputs directly to outputs. There exist combinations of the above approaches, like the LSTM-CRF network and the BI-LSTM-CRF network. 
+Other improvements on the RNN model include neural Turing machines, adaptive computation time, neural programmers, and attention mechanisms, the latter of which form the basis for GPT-2 and related technologies. 
+Restrictions and partial release By the early 2010s, the best performance in neural machine translation was achieved with the encoder–decoder model, in which a RNN or LSTM "encoder network" encoded source sentences into vectors, and a "decoder network" of similar architecture processed these vectors into translated output. 
+2014 saw the introduction of significantly more complex "attention" mechanisms, which vastly augmented these models' performance. 
+Attention mechanisms gave these models the ability to adaptively focus their decoder networks' "attention" on specific aspects of the source text, rather than forcing them to parse the entire text as one vector. 
+774M release 2017 then saw the introduction of "transformer" models, which went a step further by using attention mechanisms to replace the RNN/LSTM architecture entirely. 
+Full 1.5B release One constraint of encoder–decoder models was the difficulty of compressing the encodings of larger sentences into fixed-length vectors; performance often deteriorated on larger inputs. 
+In 2014, Bahdanau et al. introduced an extension to the encoder–decoder model that could "align and translate jointly". 
+For each word of the source sentence that was translated, the Bahdanau model's encoder (a bidirectional RNN with 1000 hidden units in each direction) searched the entire rest of that sentence for the positions of relevant information. 
+Rather than giving the decoder a fixed-length vector encoding of the entire input sequence (like previous models), it produced "context vectors", associated with those positions as well as previously generated target words. 
+The decoder (which also had 1000 hidden units) then used these context vectors to decide where to focus its "attention". 
+Limitations Research into "attention" mechanisms was continued by Luong et al. in a 2015 paper. A "global" approach based on the Bahdanau paper was attempted, as well as a "local" approach wherein only a subset of source words were "considered" at a time; the local approach, while more architecturally complicated, was less computationally expensive and easier to train. 
+It took 7–10 days to fully train an English–German translation model, which was specifically designed to be capable of translating 1,000 target words per second; its accuracy was tested against the 2014 ACL Workshop on Machine Translation (WMT'14) task for English–German sentence pairs, and achieved a result of 23.0 BLEU—a 2.1 BLEU improvement on the previous best result achieved by previous attempts, a phrase-based language model from Buck et al. 
+2014. Implementations and subsequent research While attention mechanisms were effective in improving performance when used to augment existing convolutional and recurrent neural network architectures, it was soon discovered that performant models could be built using attention mechanisms on their own, without anything else underlying them.. 
+Parallel computing is a type of computation in which many calculations or processes are carried out simultaneously. 
+Large problems can often be divided into smaller ones, which can then be solved at the same time. There are several different forms of parallel computing: bit-level, instruction-level, data, and task parallelism. 
+Parallelism has long been employed in high-performance computing, but has gained broader interest due to the physical constraints preventing frequency scaling. 
+As power consumption (and consequently heat generation) by computers has become a concern in recent years, parallel computing has become the dominant paradigm in computer architecture, mainly in the form of multi-core processors. 
+Background Parallel computing is closely related to concurrent computing—they are frequently used together, and often conflated, though the two are distinct: it is possible to have parallelism without concurrency, and concurrency without parallelism (such as multitasking by time-sharing on a single-core CPU). 
+In parallel computing, a computational task is typically broken down into several, often many, very similar sub-tasks that can be processed independently and whose results are combined afterwards, upon completion. 
+In contrast, in concurrent computing, the various processes often do not address related tasks; when they do, as is typical in distributed computing, the separate tasks may have a varied nature and often require some inter-process communication during execution. 
+Amdahl's law and Gustafson's law Parallel computers can be roughly classified according to the level at which the hardware supports parallelism, with multi-core and multi-processor computers having multiple processing elements within a single machine, while clusters, MPPs, and grids use multiple computers to work on the same task. 
+Specialized parallel computer architectures are sometimes used alongside traditional processors, for accelerating specific tasks. 
+Dependencies In some cases parallelism is transparent to the programmer, such as in bit-level or instruction-level parallelism, but explicitly parallel algorithms, particularly those that use concurrency, are more difficult to write than sequential ones, because concurrency introduces several new classes of potential software bugs, of which race conditions are the most common. 
+Communication and synchronization between the different subtasks are typically some of the greatest obstacles to getting optimal parallel program performance. 
+Race conditions, mutual exclusion, synchronization, and parallel slowdown A theoretical upper bound on the speed-up of a single program as a result of parallelization is given by Amdahl's law, which states that it is limited by the fraction of time for which the parallelization can be utilised. 
+Fine-grained, coarse-grained, and embarrassing parallelism Traditionally, computer software has been written for serial computation. 
+To solve a problem, an algorithm is constructed and implemented as a serial stream of instructions. 
+These instructions are executed on a central processing unit on one computer. Only one instruction may execute at a time—after that instruction is finished, the next one is executed. 
+Flynn's taxonomy Parallel computing, on the other hand, uses multiple processing elements simultaneously to solve a problem. 
+This is accomplished by breaking the problem into independent parts so that each processing element can execute its part of the algorithm simultaneously with the others. 
+The processing elements can be diverse and include resources such as a single computer with multiple processors, several networked computers, specialized hardware, or any combination of the above. 
+Historically parallel computing was used for scientific computing and the simulation of scientific problems, particularly in the natural and engineering sciences, such as meteorology. 
+This led to the design of parallel hardware and software, as well as high performance computing. Types of parallelism Frequency scaling was the dominant reason for improvements in computer performance from the mid-1980s until 2004. 
+The runtime of a program is equal to the number of instructions multiplied by the average time per instruction. 
+Maintaining everything else constant, increasing the clock frequency decreases the average time it takes to execute an instruction. 
+An increase in frequency thus decreases runtime for all compute-bound programs. However, power consumption P by a chip is given by the equation P = C × V 2 × F, where C is the capacitance being switched per clock cycle (proportional to the number of transistors whose inputs change), V is voltage, and F is the processor frequency (cycles per second). 
+Increases in frequency increase the amount of power used in a processor. Increasing processor power consumption led ultimately to Intel's May 8, 2004 cancellation of its Tejas and Jayhawk processors, which is generally cited as the end of frequency scaling as the dominant computer architecture paradigm. 
+Bit-level parallelism To deal with the problem of power consumption and overheating the major central processing unit (CPU or processor) manufacturers started to produce power efficient processors with multiple cores. 
+The core is the computing unit of the processor and in multi-core processors each core is independent and can access the same memory concurrently. 
+Multi-core processors have brought parallel computing to desktop computers. Thus parallelisation of serial programmes has become a mainstream programming task. 
+In 2012 quad-core processors became standard for desktop computers, while servers have 10+ core processors. 
+From Moore's law it can be predicted that the number of cores per processor will double every 18–24 months. 
+This could mean that after 2020 a typical processor will have dozens or hundreds of cores, however in reality the standard is somewhere in the region of 4 to 16 cores, with some designs having a mix of performance and efficiency cores (such as ARM's big.LITTLE design) due to thermal and design constraints. 
+Instruction-level parallelism An operating system can ensure that different tasks and user programmes are run in parallel on the available cores. 
+However, for a serial software programme to take full advantage of the multi-core architecture the programmer needs to restructure and parallelise the code. 
+A speed-up of application software runtime will no longer be achieved through frequency scaling, instead programmers will need to parallelise their software code to take advantage of the increasing computing power of multicore architectures. 
+Task parallelism Optimally, the speedup from parallelization would be linear—doubling the number of processing elements should halve the runtime, and doubling it a second time should again halve the runtime. 
+However, very few parallel algorithms achieve optimal speedup. Most of them have a near-linear speedup for small numbers of processing elements, which flattens out into a constant value for large numbers of processing elements. 
+Superword level parallelism The potential speedup of an algorithm on a parallel computing platform is given by Amdahl's law Hardware where Memory and communication Since Slatency < 1/(1 - p), it shows that a small part of the program which cannot be parallelized will limit the overall speedup available from parallelization. 
+A program solving a large mathematical or engineering problem will typically consist of several parallelizable parts and several non-parallelizable (serial) parts. 
+If the non-parallelizable part of a program accounts for 10% of the runtime (p = 0.9), we can get no more than a 10 times speedup, regardless of how many processors are added. 
+This puts an upper limit on the usefulness of adding more parallel execution units. "When a task cannot be partitioned because of sequential constraints, the application of more effort has no effect on the schedule. 
+The bearing of a child takes nine months, no matter how many women are assigned." Classes of parallel computers Amdahl's law only applies to cases where the problem size is fixed. 
+In practice, as more computing resources become available, they tend to get used on larger problems (larger datasets), and the time spent in the parallelizable part often grows much faster than the inherently serial work. 
+In this case, Gustafson's law gives a less pessimistic and more realistic assessment of parallel performance: Multi-core computing Both Amdahl's law and Gustafson's law assume that the running time of the serial part of the program is independent of the number of processors. 
+Amdahl's law assumes that the entire problem is of fixed size so that the total amount of work to be done in parallel is also independent of the number of processors, whereas Gustafson's law assumes that the total amount of work to be done in parallel varies linearly with the number of processors. 
+Symmetric multiprocessing Understanding data dependencies is fundamental in implementing parallel algorithms. 
+No program can run more quickly than the longest chain of dependent calculations (known as the critical path), since calculations that depend upon prior calculations in the chain must be executed in order. 
+However, most algorithms do not consist of just a long chain of dependent calculations; there are usually opportunities to execute independent calculations in parallel. 
+Distributed computing Let Pi and Pj be two program segments. Bernstein's conditions describe when the two are independent and can be executed in parallel. 
+For Pi, let Ii be all of the input variables and Oi the output variables, and likewise for Pj. Pi and Pj are independent if they satisfy Cluster computing Violation of the first condition introduces a flow dependency, corresponding to the first segment producing a result used by the second segment. 
+The second condition represents an anti-dependency, when the second segment produces a variable needed by the first segment. 
+The third and final condition represents an output dependency: when two segments write to the same location, the result comes from the logically last executed segment. 
+Massively parallel computing Consider the following functions, which demonstrate several kinds of dependencies: Grid computing In this example, instruction 3 cannot be executed before (or even in parallel with) instruction 2, because instruction 3 uses a result from instruction 2. 
+It violates condition 1, and thus introduces a flow dependency. Specialized parallel computers In this example, there are no dependencies between the instructions, so they can all be run in parallel. 
+Reconfigurable computing with field-programmable gate arrays Bernstein's conditions do not allow memory to be shared between different processes. 
+For that, some means of enforcing an ordering between accesses is necessary, such as semaphores, barriers or some other synchronization method. 
+General-purpose computing on graphics processing units (GPGPU) Subtasks in a parallel program are often called threads. 
+Some parallel computer architectures use smaller, lightweight versions of threads known as fibers, while others use bigger versions known as processes. 
+However, "threads" is generally accepted as a generic term for subtasks. Threads will often need synchronized access to an object or other resource, for example when they must update a variable that is shared between them. 
+Without synchronization, the instructions between the two threads may be interleaved in any order. For example, consider the following program: Application-specific integrated circuits If instruction 1B is executed between 1A and 3A, or if instruction 1A is executed between 1B and 3B, the program will produce incorrect data. 
+This is known as a race condition. The programmer must use a lock to provide mutual exclusion. A lock is a programming language construct that allows one thread to take control of a variable and prevent other threads from reading or writing it, until that variable is unlocked. 
+The thread holding the lock is free to execute its critical section (the section of a program that requires exclusive access to some variable), and to unlock the data when it is finished. 
+Therefore, to guarantee correct program execution, the above program can be rewritten to use locks: Vector processors One thread will successfully lock variable V, while the other thread will be locked out—unable to proceed until V is unlocked again. 
+This guarantees correct execution of the program. Locks may be necessary to ensure correct program execution when threads must serialize access to resources, but their use can greatly slow a program and may affect its reliability. 
+Software Locking multiple variables using non-atomic locks introduces the possibility of program deadlock. 
+An atomic lock locks multiple variables all at once. If it cannot lock all of them, it does not lock any of them. 
+If two threads each need to lock the same two variables using non-atomic locks, it is possible that one thread will lock one of them and the second thread will lock the second variable. 
+In such a case, neither thread can complete, and deadlock results. Parallel programming languages Many parallel programs require that their subtasks act in synchrony. 
+This requires the use of a barrier. Barriers are typically implemented using a lock or a semaphore. 
+One class of algorithms, known as lock-free and wait-free algorithms, altogether avoids the use of locks and barriers. 
+However, this approach is generally difficult to implement and requires correctly designed data structures. 
+Automatic parallelization Not all parallelization results in speed-up. Generally, as a task is split up into more and more threads, those threads spend an ever-increasing portion of their time communicating with each other or waiting on each other for access to resources. 
+Once the overhead from resource contention or communication dominates the time spent on other computation, further parallelization (that is, splitting the workload over even more threads) increases rather than decreases the amount of time required to finish. 
+This problem, known as parallel slowdown, can be improved in some cases by software analysis and redesign. 
+Application checkpointing Applications are often classified according to how often their subtasks need to synchronize or communicate with each other. 
+An application exhibits fine-grained parallelism if its subtasks must communicate many times per second; it exhibits coarse-grained parallelism if they do not communicate many times per second, and it exhibits embarrassing parallelism if they rarely or never have to communicate. 
+Embarrassingly parallel applications are considered the easiest to parallelize. Algorithmic methods Michael J. 
+Flynn created one of the earliest classification systems for parallel (and sequential) computers and programs, now known as Flynn's taxonomy. 
+Flynn classified programs and computers by whether they were operating using a single set or multiple sets of instructions, and whether or not those instructions were using a single set or multiple sets of data. 
+Fault tolerance The single-instruction-single-data (SISD) classification is equivalent to an entirely sequential program. 
+The single-instruction-multiple-data (SIMD) classification is analogous to doing the same operation repeatedly over a large data set. 
+This is commonly done in signal processing applications. Multiple-instruction-single-data (MISD) is a rarely used classification. 
+While computer architectures to deal with this were devised (such as systolic arrays), few applications that fit this class materialized. 
+Multiple-instruction-multiple-data (MIMD) programs are by far the most common type of parallel programs. 
+History According to David A. Patterson and John L. Hennessy, "Some machines are hybrids of these categories, of course, but this classic model has survived because it is simple, easy to understand, and gives a good first approximation. 
+It is also—perhaps because of its understandability—the most widely used scheme." Biological brain as massively parallel computer From the advent of very-large-scale integration (VLSI) computer-chip fabrication technology in the 1970s until about 1986, speed-up in computer architecture was driven by doubling computer word size—the amount of information the processor can manipulate per cycle. 
+Increasing the word size reduces the number of instructions the processor must execute to perform an operation on variables whose sizes are greater than the length of the word. 
+For example, where an 8-bit processor must add two 16-bit integers, the processor must first add the 8 lower-order bits from each integer using the standard addition instruction, then add the 8 higher-order bits using an add-with-carry instruction and the carry bit from the lower order addition; thus, an 8-bit processor requires two instructions to complete a single operation, where a 16-bit processor would be able to complete the operation with a single instruction. 
+See also Historically, 4-bit microprocessors were replaced with 8-bit, then 16-bit, then 32-bit microprocessors. 
+This trend generally came to an end with the introduction of 32-bit processors, which has been a standard in general-purpose computing for two decades. 
+Not until the early 2000s, with the advent of x86-64 architectures, did 64-bit processors become commonplace. 
+References A computer program is, in essence, a stream of instructions executed by a processor. Without instruction-level parallelism, a processor can only issue less than one instruction per clock cycle (IPC < 1). 
+These processors are known as subscalar processors. These instructions can be re-ordered and combined into groups which are then executed in parallel without changing the result of the program. 
+This is known as instruction-level parallelism. Advances in instruction-level parallelism dominated computer architecture from the mid-1980s until the mid-1990s. 
+Further reading All modern processors have multi-stage instruction pipelines. Each stage in the pipeline corresponds to a different action the processor performs on that instruction in that stage; a processor with an N-stage pipeline can have up to N different instructions at different stages of completion and thus can issue one instruction per clock cycle (IPC = 1). 
+These processors are known as scalar processors. The canonical example of a pipelined processor is a RISC processor, with five stages: instruction fetch (IF), instruction decode (ID), execute (EX), memory access (MEM), and register write back (WB). 
+The Pentium 4 processor had a 35-stage pipeline. Ext. 
